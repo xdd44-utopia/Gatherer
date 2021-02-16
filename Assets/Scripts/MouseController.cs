@@ -79,21 +79,28 @@ public class MouseController : MonoBehaviour
 
 	private void gather() {
 		GameObject[] units;
+		List<GameObject> units_avi = new List<GameObject>();
 		int cnt = 0;
 		units = GameObject.FindGameObjectsWithTag("Unit");
+	
 		foreach (GameObject unit in units) {
-			bool result = unit.GetComponent<UnitController>().startGather(transform.position);
+			bool result = unit.GetComponent<UnitController>().tryGather(transform.position);
 			if (result) {
+				units_avi.Add(unit);
 				cnt++;
 			}
 		}
-		if (cnt > 0) {
-			attack();
+		if (cnt > 1) {
+			foreach (GameObject unit_avi in units_avi)
+			{
+				unit_avi.GetComponent<UnitController>().startGather(transform.position);
+			}
+			attack(cnt);
 		}
 		Debug.Log(cnt + " units gathered");
 	}
 
-	private void attack() {
+	private void attack(int damage) {
 		GameObject[] enemies;
 		int cnt = 0;
 		enemies = GameObject.FindGameObjectsWithTag("Enemy");
