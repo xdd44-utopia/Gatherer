@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
 	private Vector2 targetPos;
-	private const float followSpeed = 0.3f;
+	private const float followSpeed = 0.2f;
 	// Start is called before the first frame update
 	void Start() {
 		
@@ -13,6 +13,10 @@ public class EnemyController : MonoBehaviour
 
 	// Update is called once per frame
 	void Update() {
+		move1();
+	}
+
+	void move1() {
 		GameObject[] units;
 		GameObject target = null;
 		float minDist = 2000f;

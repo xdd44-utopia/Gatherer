@@ -8,11 +8,13 @@ public class UnitController : MonoBehaviour
 	private SpriteRenderer spriteRenderer;
 
 	private const float moveSpeed = 0.01f;
-	private const float followSpeed = 5f;
+	private const float dragSpeed = 2.5f;
+	private const float followSpeed = 1f;
 	private const float gatherTime = 0.3f;
 	private const float angleRange = 0.1f;
 	private const float maxGatherDist = 2f;
 	private const float cooldownTime = 2f;
+	private const float randomRange = 0f;
 
 	private Status status = Status.Free;
 	private float camWidth;
@@ -20,7 +22,7 @@ public class UnitController : MonoBehaviour
 
 	private float moveAngle;
 	private Vector2 startPos;
-	private Vector2 targetPos;
+	public Vector2 targetPos;
 	private Vector2 gatherTar;
 	private float timer;
 	private float cooldown = 0f;
@@ -59,6 +61,12 @@ public class UnitController : MonoBehaviour
 	}
 
 	private void move() {
+		transform.position = Vector2.Lerp(transform.position, targetPos, Time.deltaTime * (cooldown <= 0 ? followSpeed : followSpeed / 5f));
+		if (Random.Range(0f, 50f) > 1f) {
+			moveAngle += Random.Range(-angleRange, angleRange);
+		}
+		moveAngle += 4 * Mathf.PI;
+		moveAngle = Mathf.Repeat(moveAngle, 2 * Mathf.PI);
 		targetPos = targetPos + new Vector2(Mathf.Cos(moveAngle) * moveSpeed, Mathf.Sin(moveAngle) * moveSpeed);
 		if (targetPos.x < -camWidth) {
 			targetPos.x = -camWidth;
@@ -76,12 +84,6 @@ public class UnitController : MonoBehaviour
 			targetPos.y = camHeight;
 			moveAngle = - Mathf.PI / 2f;
 		}
-		if (Random.Range(0f, 50f) > 1f) {
-			moveAngle += Random.Range(-angleRange, angleRange);
-		}
-		moveAngle += 4 * Mathf.PI;
-		moveAngle = Mathf.Repeat(moveAngle, 2 * Mathf.PI);
-		transform.position = Vector2.Lerp(transform.position, targetPos, Time.deltaTime * followSpeed);
 	}
 
 	private void gather() {
@@ -104,7 +106,15 @@ public class UnitController : MonoBehaviour
 	}
 
 	public bool tryGather(Vector3 tar) {
-		return (Vector3.Distance(tar, transform.position) < maxGatherDist && status == Status.Free && cooldown <= 0f);
+		if (Vector3.Distance(tar, transform.position) < maxGatherDist && status == Status.Free && cooldown <= 0f) {
+			Vector2 tar2 = new Vector2(tar.x, tar.y) + new Vector2(Random.Range(-randomRange, randomRange), Random.Range(-randomRange, randomRange));
+			targetPos = Vector2.Lerp(targetPos, tar2, Time.deltaTime * dragSpeed);
+			Debug.Log(targetPos);
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	public bool startGather(Vector3 tar) {
