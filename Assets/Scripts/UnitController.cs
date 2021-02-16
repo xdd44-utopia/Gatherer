@@ -5,11 +5,14 @@ using UnityEngine;
 public class UnitController : MonoBehaviour
 {
 
+	private SpriteRenderer spriteRenderer;
+
 	private const float moveSpeed = 0.01f;
 	private const float followSpeed = 5f;
 	private const float gatherTime = 0.3f;
 	private const float angleRange = 0.1f;
-	private const float maxGatherDist = 3f;
+	private const float maxGatherDist = 2f;
+	private const float cooldownTime = 2f;
 
 	private Status status = Status.Free;
 	private float camWidth;
@@ -20,9 +23,11 @@ public class UnitController : MonoBehaviour
 	private Vector2 targetPos;
 	private Vector2 gatherTar;
 	private float timer;
+	private float cooldown = 0f;
 
 	// Start is called before the first frame update
 	void Start() {
+		spriteRenderer = GetComponent<SpriteRenderer>();
 		moveAngle = Random.Range(0f, 2 * Mathf.PI);
 		targetPos = transform.position;
 		Camera cam = Camera.main;
@@ -42,6 +47,14 @@ public class UnitController : MonoBehaviour
 			case Status.Spreading:
 				spread();
 				break;
+		}
+
+		if (cooldown > 0) {
+			cooldown -= Time.deltaTime;
+			spriteRenderer.color = new Color(0, 1f, 0, 0.25f);
+		}
+		else {
+			spriteRenderer.color = new Color(0, 1f, 0, 1f);
 		}
 	}
 
@@ -77,6 +90,7 @@ public class UnitController : MonoBehaviour
 		if (timer > gatherTime) {
 			timer = 0f;
 			status = Status.Spreading;
+			cooldown = cooldownTime;
 		}
 	}
 
@@ -89,9 +103,12 @@ public class UnitController : MonoBehaviour
 		}
 	}
 
+	public bool tryGather(Vector3 tar) {
+		return (Vector3.Distance(tar, transform.position) < maxGatherDist && status == Status.Free && cooldown <= 0f);
+	}
+
 	public bool startGather(Vector3 tar) {
-		Debug.Log("try gather " + tar + " " + transform.position);
-		if (Vector3.Distance(tar, transform.position) < maxGatherDist) {
+		if (tryGather(tar)) {
 			timer = 0f;
 			gatherTar = tar;
 			startPos = transform.position;
@@ -101,10 +118,6 @@ public class UnitController : MonoBehaviour
 		else {
 			return false;
 		}
-	}
-
-	public bool isFree() {
-		return (status == Status.Free);
 	}
 
 	private enum Status {
