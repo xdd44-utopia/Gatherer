@@ -5,16 +5,16 @@ using UnityEngine;
 public class UnitController : MonoBehaviour
 {
 
+	//public GameObject targetDot;
 	private SpriteRenderer spriteRenderer;
 
 	private const float moveSpeed = 0.01f;
-	private const float dragSpeed = 2.5f;
+	private const float dragSpeed = 10f;
 	private const float followSpeed = 1f;
 	private const float gatherTime = 0.3f;
 	private const float angleRange = 0.1f;
 	private const float maxGatherDist = 2f;
 	private const float cooldownTime = 2f;
-	private const float randomRange = 0f;
 
 	private Status status = Status.Free;
 	private float camWidth;
@@ -22,7 +22,7 @@ public class UnitController : MonoBehaviour
 
 	private float moveAngle;
 	private Vector2 startPos;
-	public Vector2 targetPos;
+	private Vector2 targetPos;
 	private Vector2 gatherTar;
 	private float timer;
 	private float cooldown = 0f;
@@ -58,6 +58,8 @@ public class UnitController : MonoBehaviour
 		else {
 			spriteRenderer.color = new Color(0, 1f, 0, 1f);
 		}
+
+		//targetDot.transform.position = targetPos;
 	}
 
 	private void move() {
@@ -107,9 +109,8 @@ public class UnitController : MonoBehaviour
 
 	public bool tryGather(Vector3 tar) {
 		if (Vector3.Distance(tar, transform.position) < maxGatherDist && status == Status.Free && cooldown <= 0f) {
-			Vector2 tar2 = new Vector2(tar.x, tar.y) + new Vector2(Random.Range(-randomRange, randomRange), Random.Range(-randomRange, randomRange));
-			targetPos = Vector2.Lerp(targetPos, tar2, Time.deltaTime * dragSpeed);
-			Debug.Log(targetPos);
+			float randAngle = Random.Range(0, Mathf.PI * 2);
+			targetPos = Vector3.Lerp(targetPos, tar + new Vector3(Mathf.Cos(randAngle) * maxGatherDist, Mathf.Sin(randAngle) * maxGatherDist, 0), Time.deltaTime * dragSpeed);
 			return true;
 		}
 		else {
