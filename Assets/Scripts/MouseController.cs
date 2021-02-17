@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MouseController : MonoBehaviour
 {
+	//爆炸特效
+	public GameObject brustFX;
 	public GameObject attacker;
 	public float rangeMultiplier;
 	public float damageMultiplier;
@@ -97,10 +99,12 @@ public class MouseController : MonoBehaviour
 			}
 		}
 		if (cnt > 1) {
+			GatherExplostionEffect();
 			foreach (GameObject unit_avi in units_avi)
 			{
 				unit_avi.GetComponent<UnitController>().startGather(transform.position);
 			}
+
 			attacker.transform.position = mousePos;
 			StartCoroutine(attack(cnt * rangeMultiplier, cnt * damageMultiplier, units_avi[0].GetComponent<UnitController>().getGatherTime()));
 		}
@@ -110,5 +114,14 @@ public class MouseController : MonoBehaviour
 		yield return new WaitForSeconds(delay);
 		attacker.GetComponent<AttackController>().activate(r, d);
     }
+
+	//封装所有爆炸后的效果
+	private void GatherExplostionEffect()
+    {
+		//爆炸特效
+		Instantiate(brustFX, mousePos, Quaternion.identity);
+		FindObjectOfType<CameraShake>().Shake();
+		FindObjectOfType<RipplePostProcesser>().RippleEffect();
+	}
 
 }

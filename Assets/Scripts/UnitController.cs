@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class UnitController : MonoBehaviour
 {
-
+	//掉血特效
+	public GameObject bloodFX;
 	public GameObject health;
 	private SpriteRenderer spriteRenderer;
 
@@ -132,6 +133,7 @@ public class UnitController : MonoBehaviour
 
 	public void getDamaged(float damage) {
 		health.GetComponent<HealthbarController>().getDamaged(damage);
+		DamageEffect();
 	}
 
 	public float getGatherTime() {
@@ -142,5 +144,13 @@ public class UnitController : MonoBehaviour
 		Free,
 		Gathering,
 		Spreading
+	}
+
+	//所有受伤后的效果
+	private void DamageEffect()
+	{
+		//掉血特效
+		Instantiate(bloodFX, transform.position, Quaternion.identity);
+		FindObjectOfType<CameraShake>().Shake();
 	}
 }

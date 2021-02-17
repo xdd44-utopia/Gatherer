@@ -275,6 +275,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 521533700473739560}
   health: {fileID: 7502891505548522530}
+  bloodFX: {fileID: 2966782554830514058, guid: 1d551fc2c898840f38dcd814d137e128, type: 3}
+  attackRange: 1
+  attackDamage: 1
 --- !u!1 &7502891505548522530
 GameObject:
   m_ObjectHideFlags: 0

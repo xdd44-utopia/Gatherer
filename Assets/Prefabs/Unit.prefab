@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e9f76c6515749d89aec3337be2a027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodFX: {fileID: 2966782554830514058, guid: 98138024c452649988d33e0ad949f8b4, type: 3}
   health: {fileID: 9174097685900660579}
 --- !u!1 &9174097685900660579
 GameObject:

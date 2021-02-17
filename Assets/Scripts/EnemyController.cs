@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
 
 	public GameObject weapon;
 	public GameObject health;
+	public GameObject bloodFX;
 	private Vector2 targetPos;
 
 	//attack
@@ -103,6 +104,7 @@ public class EnemyController : MonoBehaviour
 	}
 	
 	public void getDamaged(float damage) {
+		Instantiate(bloodFX, transform.position, Quaternion.identity);
 		health.GetComponent<HealthbarController>().getDamaged(damage);
 	}
 }
