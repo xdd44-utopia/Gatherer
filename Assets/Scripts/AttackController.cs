@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttackController : MonoBehaviour
 {
 	private const float speed = 7.5f;
-	private const float spriteScale = 2f;
+	private const float spriteScale = 4f;
 	private SpriteRenderer spriteRenderer;
 	private Status status = Status.Idle;
 	private float radius = 0f;
@@ -56,6 +56,7 @@ public class AttackController : MonoBehaviour
 	}
 
 	public void activate(float r, float d) {
+		Debug.Log(r + " " + d);
 		radius = r;
 		damage = d;
 		currentRadius = 0f;
