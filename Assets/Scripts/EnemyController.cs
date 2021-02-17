@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+
+	public GameObject weapon;
+	public GameObject health;
 	private Vector2 targetPos;
+
+	//attack
+	private const float attackInterval = 1.5f;
+	public float attackRange;
+	public float attackDamage;
+	private float attackTimer = 0f;
 
 	//Move2
 	private const float ka = 0.1f;
@@ -22,6 +31,13 @@ public class EnemyController : MonoBehaviour
 
 	// Update is called once per frame
 	void Update() {
+
+		attackTimer += Time.deltaTime;
+		if (attackTimer > attackInterval) {
+			weapon.GetComponent<EnemyWeaponController>().activate(attackRange, attackDamage);
+			attackTimer = 0f;
+		}
+
 		move2();
 	}
 
@@ -84,5 +100,9 @@ public class EnemyController : MonoBehaviour
 		targetPos += repulsive;
 
 		transform.position = Vector2.Lerp(transform.position, targetPos, Time.deltaTime * followSpeed);
+	}
+	
+	public void getDamaged(float damage) {
+		health.GetComponent<HealthbarController>().getDamaged(damage);
 	}
 }

@@ -5,13 +5,13 @@ using UnityEngine;
 public class UnitController : MonoBehaviour
 {
 
-	//public GameObject targetDot;
+	public GameObject health;
 	private SpriteRenderer spriteRenderer;
 
 	private const float moveSpeed = 0.01f;
 	private const float dragSpeed = 10f;
 	private const float followSpeed = 1f;
-	private const float gatherTime = 0.3f;
+	private const float gatherTime = 0.25f;
 	private const float angleRange = 0.1f;
 	private const float maxGatherDist = 2f;
 	private const float cooldownTime = 2f;
@@ -59,7 +59,6 @@ public class UnitController : MonoBehaviour
 			spriteRenderer.color = new Color(0, 1f, 0, 1f);
 		}
 
-		//targetDot.transform.position = targetPos;
 	}
 
 	private void move() {
@@ -129,6 +128,14 @@ public class UnitController : MonoBehaviour
 		else {
 			return false;
 		}
+	}
+
+	public void getDamaged(float damage) {
+		health.GetComponent<HealthbarController>().getDamaged(damage);
+	}
+
+	public float getGatherTime() {
+		return gatherTime;
 	}
 
 	private enum Status {

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class MouseController : MonoBehaviour
 {
+	public GameObject attacker;
+	public float rangeMultiplier;
+	public float damageMultiplier;
+
+	private Vector3 mousePos;
 	private LineRenderer lineRenderer;
 	private GameObject[] gatherable;
 	private int gatherableCnt;
@@ -21,7 +26,8 @@ public class MouseController : MonoBehaviour
 		camWidth = camHeight * cam.aspect;
 
 		lineRenderer = gameObject.AddComponent<LineRenderer>() as LineRenderer;
-		lineRenderer.SetWidth(0.025f, 0.025f);
+		lineRenderer.startWidth = 0.05f;
+		lineRenderer.endWidth = 0.05f;
 		lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
 		lineRenderer.alignment = LineAlignment.TransformZ;
 		lineRenderer.startColor = new Color(1f, 1f, 1f, 0.25f);
@@ -33,7 +39,7 @@ public class MouseController : MonoBehaviour
 
 	// Update is called once per frame
 	void Update() {
-		Vector3 mousePos = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0f);
+		mousePos = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0f);
 		transform.position = mousePos;
 		hideMouse();
 		checkGatherable();
@@ -95,20 +101,14 @@ public class MouseController : MonoBehaviour
 			{
 				unit_avi.GetComponent<UnitController>().startGather(transform.position);
 			}
-			attack(cnt);
+			attacker.transform.position = mousePos;
+			StartCoroutine(attack(cnt * rangeMultiplier, cnt * damageMultiplier, units_avi[0].GetComponent<UnitController>().getGatherTime()));
 		}
-		Debug.Log(cnt + " units gathered");
 	}
 
-	private void attack(int damage) {
-		GameObject[] enemies;
-		int cnt = 0;
-		enemies = GameObject.FindGameObjectsWithTag("Enemy");
-		foreach (GameObject enemy in enemies) {
-			if (Vector3.Distance(transform.position, enemy.transform.position) < attackRange) {
-				Destroy(enemy, 0.3f);
-			}
-		}
-		Debug.Log(cnt + " units gathered");
-	}
+	IEnumerator attack(float r, float d, float delay) {
+		yield return new WaitForSeconds(delay);
+		attacker.GetComponent<AttackController>().activate(r, d);
+    }
+
 }
