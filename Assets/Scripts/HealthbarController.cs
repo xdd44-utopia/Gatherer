@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class HealthbarController : MonoBehaviour
 {
-	private float hp = 1f;
+	public GameObject[] bloodStains;
+	public float hp = 1f;
 	private float scaleBase = 0.5f;
-	// Start is called before the first frame update
-	void Start() {
-		 
-	}
-
-	// Update is called once per frame
+	
 	void Update() {
-		if (hp <= 0) {
-			Destroy(transform.parent.gameObject, 0f);
+		if (hp <= 0)
+		{
+			Death();
 		}
 		transform.localScale = new Vector2(hp, transform.localScale.y);
 		transform.localPosition = new Vector2((hp / 2f - 0.5f) * scaleBase, transform.localPosition.y);
@@ -22,5 +19,11 @@ public class HealthbarController : MonoBehaviour
 
 	public void getDamaged(float damage) {
 		hp -= damage;
-	}
+    }
+
+    private void Death()
+    {
+		Instantiate(bloodStains[Random.Range(0, bloodStains.Length)], transform.position, Quaternion.identity);
+        Destroy(transform.parent.gameObject, 0f);
+    }
 }

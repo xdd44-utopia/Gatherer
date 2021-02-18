@@ -18,9 +18,4 @@ public class SpawnerController : MonoBehaviour
 			unit.transform.position = new Vector2(Random.Range(-camWidth, camWidth), Random.Range(-camHeight, camHeight));
 		}
 	}
-
-	// Update is called once per frame
-	void Update() {
-		
-	}
 }

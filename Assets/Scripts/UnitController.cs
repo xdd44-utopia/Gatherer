@@ -29,7 +29,8 @@ public class UnitController : MonoBehaviour
 	private float cooldown = 0f;
 
 	// Start is called before the first frame update
-	void Start() {
+	void Start()
+	{
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		moveAngle = Random.Range(0f, 2 * Mathf.PI);
 		targetPos = transform.position;
@@ -39,8 +40,10 @@ public class UnitController : MonoBehaviour
 	}
 
 	// Update is called once per frame
-	void Update() {
-		switch (status) {
+	void Update()
+	{
+		switch (status)
+		{
 			case Status.Free:
 				move();
 				break;
@@ -52,95 +55,116 @@ public class UnitController : MonoBehaviour
 				break;
 		}
 
-		if (cooldown > 0) {
+		if (cooldown > 0)
+		{
 			cooldown -= Time.deltaTime;
 			spriteRenderer.color = new Color(0, 1f, 0, 0.25f);
 		}
-		else {
+		else
+		{
 			spriteRenderer.color = new Color(0, 1f, 0, 1f);
 		}
 
 	}
 
-	private void move() {
+	private void move()
+	{
 		transform.position = Vector2.Lerp(transform.position, targetPos, Time.deltaTime * (cooldown <= 0 ? followSpeed : followSpeed / 5f));
-		if (Random.Range(0f, 50f) > 1f) {
+		if (Random.Range(0f, 50f) > 1f)
+		{
 			moveAngle += Random.Range(-angleRange, angleRange);
 		}
 		moveAngle += 4 * Mathf.PI;
 		moveAngle = Mathf.Repeat(moveAngle, 2 * Mathf.PI);
 		targetPos = targetPos + new Vector2(Mathf.Cos(moveAngle) * moveSpeed, Mathf.Sin(moveAngle) * moveSpeed);
-		if (targetPos.x < -camWidth) {
+		if (targetPos.x < -camWidth)
+		{
 			targetPos.x = -camWidth;
 			moveAngle = 0f;
 		}
-		if (targetPos.x > camWidth) {
+		if (targetPos.x > camWidth)
+		{
 			targetPos.x = camWidth;
-			moveAngle = - Mathf.PI;
+			moveAngle = -Mathf.PI;
 		}
-		if (targetPos.y < -camHeight) {
+		if (targetPos.y < -camHeight)
+		{
 			targetPos.y = -camHeight;
 			moveAngle = Mathf.PI / 2f;
 		}
-		if (targetPos.y > camHeight) {
+		if (targetPos.y > camHeight)
+		{
 			targetPos.y = camHeight;
-			moveAngle = - Mathf.PI / 2f;
+			moveAngle = -Mathf.PI / 2f;
 		}
 	}
 
-	private void gather() {
-		transform.position = Vector2.Lerp(startPos, gatherTar, 1f - 1f / (1f + Mathf.Pow(2.71828f, 10f * (timer / gatherTime - 0.5f))) );
+	private void gather()
+	{
+		transform.position = Vector2.Lerp(startPos, gatherTar, 1f - 1f / (1f + Mathf.Pow(2.71828f, 10f * (timer / gatherTime - 0.5f))));
 		timer += Time.deltaTime;
-		if (timer > gatherTime) {
+		if (timer > gatherTime)
+		{
 			timer = 0f;
 			status = Status.Spreading;
 			cooldown = cooldownTime;
 		}
 	}
 
-	private void spread() {
-		transform.position = Vector2.Lerp(gatherTar, startPos, 1f - 1f / (1f + Mathf.Pow(2.71828f, 10f * (timer / gatherTime - 0.5f))) );
+	private void spread()
+	{
+		transform.position = Vector2.Lerp(gatherTar, startPos, 1f - 1f / (1f + Mathf.Pow(2.71828f, 10f * (timer / gatherTime - 0.5f))));
 		timer += Time.deltaTime;
-		if (timer > gatherTime) {
+		if (timer > gatherTime)
+		{
 			timer = 0f;
 			status = Status.Free;
 		}
 	}
 
-	public bool tryGather(Vector3 tar) {
-		if (Vector3.Distance(tar, transform.position) < maxGatherDist && status == Status.Free && cooldown <= 0f) {
+	public bool tryGather(Vector3 tar)
+	{
+		if (Vector3.Distance(tar, transform.position) < maxGatherDist && status == Status.Free && cooldown <= 0f)
+		{
 			float randAngle = Random.Range(0, Mathf.PI * 2);
 			targetPos = Vector3.Lerp(targetPos, tar + new Vector3(Mathf.Cos(randAngle) * maxGatherDist, Mathf.Sin(randAngle) * maxGatherDist, 0), Time.deltaTime * dragSpeed);
 			return true;
 		}
-		else {
+		else
+		{
 			return false;
 		}
 	}
 
-	public bool startGather(Vector3 tar) {
-		if (tryGather(tar)) {
+	public bool startGather(Vector3 tar)
+	{
+		if (tryGather(tar))
+		{
 			timer = 0f;
 			gatherTar = tar;
 			startPos = transform.position;
 			status = Status.Gathering;
 			return true;
 		}
-		else {
+		else
+		{
 			return false;
 		}
 	}
 
-	public void getDamaged(float damage) {
+	public void getDamaged(float damage)
+	{
 		health.GetComponent<HealthbarController>().getDamaged(damage);
 		DamageEffect();
 	}
 
-	public float getGatherTime() {
+	public float getGatherTime()
+	{
 		return gatherTime;
 	}
 
-	private enum Status {
+	private enum Status
+	{
 		Free,
 		Gathering,
 		Spreading

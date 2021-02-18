@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AttackController : MonoBehaviour
 {
+	public GameObject brustFX;
 	private const float speed = 7.5f;
 	private const float spriteScale = 4f;
 	private SpriteRenderer spriteRenderer;
@@ -12,8 +13,11 @@ public class AttackController : MonoBehaviour
 	public float currentRadius = 0f;
 	private List<GameObject> targets;
 	private float damage = 0f;
-	// Start is called before the first frame update
-	void Start() {
+    public float rangeMutiplier;
+	public float brustMaxRange = 1.5f;
+
+    // Start is called before the first frame update
+    void Start() {
 		transform.localScale = new Vector2(0f, 0f);
 		spriteRenderer = GetComponent<SpriteRenderer>();
 	}
@@ -42,7 +46,8 @@ public class AttackController : MonoBehaviour
 				}
 				if (!exists) {
 					targets.Add(unit);
-					unit.GetComponent<EnemyController>().getDamaged(damage * (radius - currentRadius) / radius);
+					//unit.GetComponent<EnemyController>().getDamaged(damage * (radius - currentRadius) / radius);
+					unit.GetComponent<EnemyStatus>().getDamaged(damage * (radius - currentRadius) / radius);
 				}
 			}
 		}
@@ -62,10 +67,23 @@ public class AttackController : MonoBehaviour
 		currentRadius = 0f;
 		targets = new List<GameObject>();
 		status = Status.Active;
+		GatherExplostionEffect(transform.position, Vector3.one * r * rangeMutiplier);
 	}
 
 	private enum Status {
 		Idle,
 		Active
+	}
+
+	//封装所有爆炸后的效果
+	private void GatherExplostionEffect(Vector3 pos, Vector3 sc)
+	{
+		//爆炸特效
+		GameObject effectGO = Instantiate(brustFX, pos, Quaternion.identity);
+		effectGO.transform.localScale = sc.x * 6 > brustMaxRange ? Vector3.one * brustMaxRange / 6 : sc;
+
+		effectGO.transform.GetChild(0).localScale = sc.x * 6 > brustMaxRange? Vector3.one * brustMaxRange : sc * 6;
+		FindObjectOfType<CameraShake>().Shake();
+		FindObjectOfType<RipplePostProcesser>().RippleEffect();
 	}
 }

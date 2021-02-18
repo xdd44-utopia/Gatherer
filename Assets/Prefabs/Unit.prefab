@@ -173,6 +173,8 @@ GameObject:
   - component: {fileID: 8848389180059524643}
   - component: {fileID: 8848389180059524642}
   - component: {fileID: 8848389180059524640}
+  - component: {fileID: 1546329607774068887}
+  - component: {fileID: 3376172150003105472}
   m_Layer: 0
   m_Name: Unit
   m_TagString: Unit
@@ -235,9 +237,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3609a88f52985487f9cc217e04d0557e, type: 3}
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.2862745, g: 0.87058824, b: 0.2925279, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -261,6 +263,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloodFX: {fileID: 2966782554830514058, guid: 98138024c452649988d33e0ad949f8b4, type: 3}
   health: {fileID: 9174097685900660579}
+--- !u!58 &1546329607774068887
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8848389180059524653}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.25
+--- !u!50 &3376172150003105472
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8848389180059524653}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &9174097685900660579
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,3 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81bb83db0aeb74470a618bbc95b005af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodStains:
+  - {fileID: 2057043482288002766, guid: 5bc30fb155f104b1799d6f3ba0de9022, type: 3}
+  - {fileID: 52791555943683384, guid: 65ff63c454df640e2a35e1d2be68c6a2, type: 3}
+  hp: 1
