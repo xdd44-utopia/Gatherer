@@ -13,6 +13,6 @@ public class CameraShake : MonoBehaviour
 
     public void Shake()
     {
-        anim.SetTrigger("shake");
+        //anim.SetTrigger("shake");
     }
 }

@@ -23,7 +23,7 @@ namespace Common
             //如果在编译器下或者PC端……
             //if(Application.platform==RuntimePlatform.WindowsEditor)
             //unity宏标签
-#if UNITY_EDITOR || UNITY_STANDALONE
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
             url = "file://" + Application.dataPath + "/StreamingAssets/" + fileName;
             //否则如果在iPhone下……
 #elif UNITY_IPHONE
@@ -31,6 +31,8 @@ namespace Common
             //否则如果在安卓下……
 #elif UNITY_ANDROID
     url = "jar:file://" + Application.dataPath + "!/assets/" + fileName;
+#elif UNITY_STANDALONE_OSX
+    url = "file://" + Application.dataPath + "/Resources/Data/StreamingAssets/" + fileName;
 #endif
             #endregion
 
