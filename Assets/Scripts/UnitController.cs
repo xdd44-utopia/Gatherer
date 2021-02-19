@@ -9,15 +9,8 @@ public class UnitController : MonoBehaviour
 	public GameObject health;
 	private SpriteRenderer spriteRenderer;
 
-	private const float moveSpeed = 0.01f;
-	private const float dragSpeed = 10f;
-	private const float followSpeed = 1f;
-	private const float gatherTime = 0.25f;
-	private const float angleRange = 0.1f;
-	private const float maxGatherDist = 2f;
-	private const float cooldownTime = 2f;
-	public bool isFrozenUnit = false;
-
+    public bool isFrozenUnit = false;
+	private Unit_Status unit_Status;
 	private Status status = Status.Free;
 	private GameObject cam;
 	private float camWidth;
@@ -35,6 +28,7 @@ public class UnitController : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		unit_Status = gameObject.GetComponent<Unit_Status>();
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		moveAngle = Random.Range(0f, 2 * Mathf.PI);
 		targetPos = transform.position;
@@ -75,14 +69,14 @@ public class UnitController : MonoBehaviour
 
 	private void move()
 	{
-		transform.position = Vector2.Lerp(transform.position, targetPos, Time.deltaTime * (cooldown <= 0 ? followSpeed : followSpeed / 5f));
+		transform.position = Vector2.Lerp(transform.position, targetPos, Time.deltaTime * (cooldown <= 0 ? unit_Status.followSpeed : unit_Status.followSpeed / 5f));
 		if (Random.Range(0f, 50f) > 1f)
 		{
-			moveAngle += Random.Range(-angleRange, angleRange);
+			moveAngle += Random.Range(-unit_Status.angleRange, unit_Status.angleRange);
 		}
 		moveAngle += 4 * Mathf.PI;
 		moveAngle = Mathf.Repeat(moveAngle, 2 * Mathf.PI);
-		targetPos = targetPos + new Vector2(Mathf.Cos(moveAngle) * moveSpeed, Mathf.Sin(moveAngle) * moveSpeed);
+		targetPos = targetPos + new Vector2(Mathf.Cos(moveAngle) * unit_Status.moveSpeed, Mathf.Sin(moveAngle) * unit_Status.moveSpeed);
 		if (targetPos.x < cam.transform.position.x - camWidth)
 		{
 			targetPos.x = cam.transform.position.x - camWidth;
@@ -107,21 +101,21 @@ public class UnitController : MonoBehaviour
 
 	private void gather()
 	{
-		transform.position = Vector2.Lerp(startPos, gatherTar, 1f - 1f / (1f + Mathf.Pow(2.71828f, 10f * (timer / gatherTime - 0.5f))));
+		transform.position = Vector2.Lerp(startPos, gatherTar, 1f - 1f / (1f + Mathf.Pow(2.71828f, 10f * (timer / unit_Status.gatherTime - 0.5f))));
 		timer += Time.deltaTime;
-		if (timer > gatherTime)
+		if (timer > unit_Status.gatherTime)
 		{
 			timer = 0f;
 			status = Status.Spreading;
-			cooldown = cooldownTime;
+			cooldown = unit_Status.cooldownTime;
 		}
 	}
 
 	private void spread()
 	{
-		transform.position = Vector2.Lerp(gatherTar, startPos, 1f - 1f / (1f + Mathf.Pow(2.71828f, 10f * (timer / gatherTime - 0.5f))));
+		transform.position = Vector2.Lerp(gatherTar, startPos, 1f - 1f / (1f + Mathf.Pow(2.71828f, 10f * (timer / unit_Status.gatherTime - 0.5f))));
 		timer += Time.deltaTime;
-		if (timer > gatherTime)
+		if (timer > unit_Status.gatherTime)
 		{
 			timer = 0f;
 			status = Status.Free;
@@ -130,10 +124,10 @@ public class UnitController : MonoBehaviour
 
 	public bool tryGather(Vector3 tar)
 	{
-		if (Vector3.Distance(tar, transform.position) < maxGatherDist && status == Status.Free && cooldown <= 0f)
+		if (Vector3.Distance(tar, transform.position) < unit_Status.maxGatherDist && status == Status.Free && cooldown <= 0f)
 		{
 			float randAngle = Random.Range(0, Mathf.PI * 2);
-			targetPos = Vector3.Lerp(targetPos, tar + new Vector3(Mathf.Cos(randAngle) * maxGatherDist, Mathf.Sin(randAngle) * maxGatherDist, 0), Time.deltaTime * dragSpeed);
+			targetPos = Vector3.Lerp(targetPos, tar + new Vector3(Mathf.Cos(randAngle) * unit_Status.maxGatherDist, Mathf.Sin(randAngle) * unit_Status.maxGatherDist, 0), Time.deltaTime * unit_Status.dragSpeed);
 			return true;
 		}
 		else
@@ -166,7 +160,7 @@ public class UnitController : MonoBehaviour
 
 	public float getGatherTime()
 	{
-		return gatherTime;
+		return unit_Status.gatherTime;
 	}
 
 	private enum Status

@@ -16,7 +16,7 @@ public class SpawnerController : MonoBehaviour
 		float camWidth = camHeight * cam.aspect;
 		for (int i=0;i<num;i++) {
 			GameObject unit = Instantiate(unitPrefab);
-			unit.GetComponent<UnitController>().isFrozenUnit=true;
+            unit.GetComponent<UnitController>().isFrozenUnit = true;
 			unit.transform.position = new Vector2(Random.Range(-camWidth, camWidth), Random.Range(-camHeight, camHeight));
 		}
 	}
