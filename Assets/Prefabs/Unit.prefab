@@ -172,10 +172,14 @@ GameObject:
   m_Component:
   - component: {fileID: 8848389180059524643}
   - component: {fileID: 8848389180059524642}
-  - component: {fileID: 8848389180059524640}
   - component: {fileID: 1546329607774068887}
   - component: {fileID: 3376172150003105472}
+<<<<<<< HEAD
   - component: {fileID: 2146515681054034904}
+=======
+  - component: {fileID: -8429477815374992331}
+  - component: {fileID: 981561245703489105}
+>>>>>>> 484a7cbc81716219de96787af327dc4cc44a9f18
   m_Layer: 0
   m_Name: Unit
   m_TagString: Unit
@@ -250,6 +254,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!114 &8848389180059524640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +270,8 @@ MonoBehaviour:
   bloodFX: {fileID: 2966782554830514058, guid: 98138024c452649988d33e0ad949f8b4, type: 3}
   health: {fileID: 9174097685900660579}
   isFrozenUnit: 0
+=======
+>>>>>>> 484a7cbc81716219de96787af327dc4cc44a9f18
 --- !u!58 &1546329607774068887
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -302,14 +309,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+<<<<<<< HEAD
 --- !u!82 &2146515681054034904
 AudioSource:
+=======
+--- !u!114 &-8429477815374992331
+MonoBehaviour:
+>>>>>>> 484a7cbc81716219de96787af327dc4cc44a9f18
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8848389180059524653}
   m_Enabled: 1
+<<<<<<< HEAD
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -398,6 +411,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0593aba66814544748b789cf25700d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.01
+  dragSpeed: 0
+  followSpeed: 0
+  gatherTime: 0
+  angleRange: 0
+  maxGatherDist: 0
+  cooldownTime: 0
+  moveSpeed_def: 0.01
+  dragSpeed_def: 10
+  followSpeed_def: 1
+  gatherTime_def: 0.25
+  angleRange_def: 0.1
+  maxGatherDist_def: 2
+  cooldownTime_def: 2
+--- !u!114 &981561245703489105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8848389180059524653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e9f76c6515749d89aec3337be2a027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodFX: {fileID: 2966782554830514058, guid: 98138024c452649988d33e0ad949f8b4, type: 3}
+  health: {fileID: 9174097685900660579}
+  isFrozenUnit: 0
+>>>>>>> 484a7cbc81716219de96787af327dc4cc44a9f18
 --- !u!1 &9174097685900660579
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
 	private float limitHeight = 2f;
 
 	private const float followSpeed = 2f;
-	private const float scaleSpeed = 10f;
+	private const float scaleSpeed = 5f;
 	private const float z = -10f;
 
 
@@ -63,7 +63,7 @@ public class CameraController : MonoBehaviour
 			height = height > limitHeight ? height : limitHeight;
 			width /= Camera.main.aspect;
 			height = height > width ? height : width;
-			height *= 1.2f;
+			height *= 1.5f;
 		}
 		else {
 			height = camHeight;
