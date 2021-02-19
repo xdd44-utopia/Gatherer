@@ -19,7 +19,9 @@ public class EnemyStatus : MonoBehaviour
 
     public void getDamaged(float damage,bool isFrozenHere)
 	{
-		Instantiate(bloodFX, transform.position, Quaternion.identity);
+		if(isFrozenHere){
+		FindObjectOfType<AudioManager>().Play("UnitAttack");
+		}Instantiate(bloodFX, transform.position, Quaternion.identity);
 		transform.GetComponentInChildren<HealthbarController>().getDamaged(damage);
 	}
 	void Update(){
