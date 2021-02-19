@@ -102,8 +102,9 @@ namespace AI.FSM
         public bool isPatrolComplete;
         private AIDestinationSetter destSetter;
         private AIPath aiPath;
+        
 
-        private void InitComponents()
+        protected virtual void InitComponents()
         {
             anim = GetComponentInChildren<Animator>();
             status = GetComponent<EnemyStatus>();
@@ -134,7 +135,7 @@ namespace AI.FSM
         public void MoveToTarget(Vector3 targetPos, float stopDistance, float speed)
         {
             LookRotation(targetPos - transform.position);
-            Debug.DrawLine(transform.position, targetPos);
+            //Debug.DrawLine(transform.position, targetPos);
 
             if ((Vector3.Distance(targetPos, transform.position) > stopDistance))
             {
@@ -158,6 +159,8 @@ namespace AI.FSM
         {
             destSetter.target = transform;
         }
+
+        public virtual void Attack() { } 
 
         #endregion
 

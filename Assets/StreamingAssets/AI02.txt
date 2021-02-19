@@ -1,0 +1,10 @@
+[Idle]
+NoHealth>Dead
+SawTarget>Shooting
+
+[Dead]
+
+[Shooting]
+NoHealth>Dead
+OutOfAttackRange>Default
+TargetKilled>Default
