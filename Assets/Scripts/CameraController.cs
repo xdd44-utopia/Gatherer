@@ -99,7 +99,6 @@ public class CameraController : MonoBehaviour
 		}
 		else {
 			transform.position = Vector3.Lerp(transform.position, shakeTar, Time.deltaTime * shakeSpeed * rangeMultiplier);
-			Debug.Log(Time.deltaTime * shakeSpeed);
 			shakeTimer += Time.deltaTime;
 			if (shakeTimer > shakeTime / shakeNum) {
 				shakeTimer = -1;
