@@ -55,6 +55,7 @@ public class AttackController : MonoBehaviour
 					
 					}
 					unit.GetComponent<EnemyStatus>().getDamaged(damage * (radius - currentRadius) / radius,freeze);
+					FindObjectOfType<AudioManager>().Play("UnitAttack");
 				}
 			}
 		}
