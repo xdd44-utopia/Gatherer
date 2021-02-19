@@ -19,6 +19,7 @@ public class UnitController : MonoBehaviour
 	public bool isFrozenUnit = false;
 
 	private Status status = Status.Free;
+	private GameObject cam;
 	private float camWidth;
 	private float camHeight;
 
@@ -37,9 +38,9 @@ public class UnitController : MonoBehaviour
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		moveAngle = Random.Range(0f, 2 * Mathf.PI);
 		targetPos = transform.position;
-		Camera cam = Camera.main;
-		camHeight = cam.orthographicSize;
-		camWidth = camHeight * cam.aspect;
+		cam = Camera.main.gameObject;
+		camHeight = cam.GetComponent<Camera>().orthographicSize;
+		camWidth = camHeight * cam.GetComponent<Camera>().aspect;
 		unitColor=GetComponent<SpriteRenderer>().color;
 	}
 
@@ -82,25 +83,25 @@ public class UnitController : MonoBehaviour
 		moveAngle += 4 * Mathf.PI;
 		moveAngle = Mathf.Repeat(moveAngle, 2 * Mathf.PI);
 		targetPos = targetPos + new Vector2(Mathf.Cos(moveAngle) * moveSpeed, Mathf.Sin(moveAngle) * moveSpeed);
-		if (targetPos.x < -camWidth)
+		if (targetPos.x < cam.transform.position.x - camWidth)
 		{
-			targetPos.x = -camWidth;
+			targetPos.x = cam.transform.position.x - camWidth;
 			moveAngle = 0f;
 		}
-		if (targetPos.x > camWidth)
+		if (targetPos.x > cam.transform.position.x + camWidth)
 		{
-			targetPos.x = camWidth;
-			moveAngle = -Mathf.PI;
+			targetPos.x = cam.transform.position.x + camWidth;
+			moveAngle = - Mathf.PI;
 		}
-		if (targetPos.y < -camHeight)
+		if (targetPos.y < cam.transform.position.y - camHeight)
 		{
-			targetPos.y = -camHeight;
+			targetPos.y = cam.transform.position.y - camHeight;
 			moveAngle = Mathf.PI / 2f;
 		}
-		if (targetPos.y > camHeight)
+		if (targetPos.y > cam.transform.position.y + camHeight)
 		{
-			targetPos.y = camHeight;
-			moveAngle = -Mathf.PI / 2f;
+			targetPos.y = cam.transform.position.y + camHeight;
+			moveAngle = - Mathf.PI / 2f;
 		}
 	}
 
