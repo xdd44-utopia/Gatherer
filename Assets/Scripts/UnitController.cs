@@ -174,7 +174,8 @@ public class UnitController : MonoBehaviour
 	private void DamageEffect()
 	{
 		//掉血特效
-		Instantiate(bloodFX, transform.position, Quaternion.identity);
+		GameObject blood = Instantiate(bloodFX, transform.position, Quaternion.identity);
+		blood.transform.position = new Vector3(blood.transform.position.x, blood.transform.position.y, 1f);
 		FindObjectOfType<CameraShake>().Shake();
 	}
 }

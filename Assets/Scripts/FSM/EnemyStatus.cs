@@ -19,7 +19,8 @@ public class EnemyStatus : MonoBehaviour
 
     public void getDamaged(float damage,bool isFrozenHere)
 	{
-		Instantiate(bloodFX, transform.position, Quaternion.identity);
+		GameObject blood = Instantiate(bloodFX, transform.position, Quaternion.identity);
+		blood.transform.position = new Vector3(blood.transform.position.x, blood.transform.position.y, 1f);
 		transform.GetComponentInChildren<HealthbarController>().getDamaged(damage);
 	}
 	void Update(){

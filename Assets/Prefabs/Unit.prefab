@@ -299,14 +299,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0593aba66814544748b789cf25700d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
+  moveSpeed: 0.01
   dragSpeed: 0
   followSpeed: 0
   gatherTime: 0
   angleRange: 0
   maxGatherDist: 0
   cooldownTime: 0
-  timer: 0
+  moveSpeed_def: 0.01
+  dragSpeed_def: 10
+  followSpeed_def: 1
+  gatherTime_def: 0.25
+  angleRange_def: 0.1
+  maxGatherDist_def: 2
+  cooldownTime_def: 2
 --- !u!114 &981561245703489105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,8 +325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e9f76c6515749d89aec3337be2a027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodFX: {fileID: 0}
-  health: {fileID: 0}
+  bloodFX: {fileID: 2966782554830514058, guid: 98138024c452649988d33e0ad949f8b4, type: 3}
+  health: {fileID: 9174097685900660579}
   isFrozenUnit: 0
 --- !u!1 &9174097685900660579
 GameObject:
