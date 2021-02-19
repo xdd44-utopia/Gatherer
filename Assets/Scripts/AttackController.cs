@@ -69,13 +69,15 @@ public class AttackController : MonoBehaviour
 	}
 
 	public void activate(float r, float d,bool isFrozenHere) {
-		if(isFrozenHere){freeze=true;}
-		//Debug.Log(r + " " + d);
+		if(isFrozenHere){
+			freeze=true;
+		}
 		radius = r;
 		damage = d;
 		currentRadius = 0f;
 		targets = new List<GameObject>();
 		status = Status.Active;
+		Camera.main.gameObject.GetComponent<CameraController>().triggerShake(radius);
 		GatherExplostionEffect(transform.position, Vector3.one * r * rangeMutiplier);
 	}
 
@@ -92,7 +94,6 @@ public class AttackController : MonoBehaviour
 		effectGO.transform.localScale = sc.x * 6 > brustMaxRange ? Vector3.one * brustMaxRange / 6 : sc;
 
 		effectGO.transform.GetChild(0).localScale = sc.x * 6 > brustMaxRange? Vector3.one * brustMaxRange : sc * 6;
-		FindObjectOfType<CameraShake>().Shake();
 		FindObjectOfType<RipplePostProcesser>().RippleEffect();
 	}
 }

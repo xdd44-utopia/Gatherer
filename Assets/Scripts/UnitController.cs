@@ -176,6 +176,5 @@ public class UnitController : MonoBehaviour
 		//掉血特效
 		GameObject blood = Instantiate(bloodFX, transform.position, Quaternion.identity);
 		blood.transform.position = new Vector3(blood.transform.position.x, blood.transform.position.y, 1f);
-		FindObjectOfType<CameraShake>().Shake();
 	}
 }

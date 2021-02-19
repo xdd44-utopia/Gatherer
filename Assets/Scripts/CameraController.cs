@@ -6,12 +6,22 @@ public class CameraController : MonoBehaviour
 {
 	private float camWidth;
 	private float camHeight;
-	private float limitWidth = 2f;
-	private float limitHeight = 2f;
+	private const float limitWidth = 2f;
+	private const float limitHeight = 2f;
 
 	private const float followSpeed = 2f;
 	private const float scaleSpeed = 5f;
 	private const float z = -10f;
+
+	private const float shakeTime = 0.3f;
+	private const float shakeSpeed = 10f;
+	private const float shakeRange = 0.1f;
+	private const int shakeNum = 5;
+	private int shakeCount = 0;
+	private float shakeTimer = 0;
+	private float rangeMultiplier;
+	private Vector3 shakePos;
+	private Vector3 shakeTar;
 
 
 	private Status status = Status.Friend;
@@ -30,6 +40,9 @@ public class CameraController : MonoBehaviour
 		switch (status) {
 			case Status.Friend:
 				freeMove();
+				break;
+			case Status.Shaking:
+				shake();
 				break;
 		}
 	}
@@ -75,9 +88,37 @@ public class CameraController : MonoBehaviour
 		GetComponent<Camera>().orthographicSize = Mathf.Lerp(GetComponent<Camera>().orthographicSize, size, Time.deltaTime * scaleSpeed);
 	}
 
+	private void shake() {
+		if (shakeCount == shakeNum) {
+			status = Status.Friend;
+		}
+		else if (shakeTimer == -1) {
+			shakeTimer = 0;
+			shakeCount++;
+			shakeTar = shakePos + new Vector3(Random.Range(-shakeRange * rangeMultiplier, shakeRange * rangeMultiplier), Random.Range(-shakeRange * rangeMultiplier, shakeRange * rangeMultiplier), 0);
+		}
+		else {
+			transform.position = Vector3.Lerp(transform.position, shakeTar, Time.deltaTime * shakeSpeed * rangeMultiplier);
+			Debug.Log(Time.deltaTime * shakeSpeed);
+			shakeTimer += Time.deltaTime;
+			if (shakeTimer > shakeTime / shakeNum) {
+				shakeTimer = -1;
+			}
+		}
+	}
+
+	public void triggerShake(float rm) {
+		rangeMultiplier = rm;
+		status = Status.Shaking;
+		shakeTimer = -1;
+		shakeCount = 0;
+		shakePos = transform.position;
+	}
+
 	private enum Status {
 		Friend,
 		All,
+		Shaking,
 		Controlled
 	}
 }
