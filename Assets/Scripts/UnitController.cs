@@ -16,6 +16,7 @@ public class UnitController : MonoBehaviour
 	private const float angleRange = 0.1f;
 	private const float maxGatherDist = 2f;
 	private const float cooldownTime = 2f;
+	public bool isFrozenUnit = false;
 
 	private Status status = Status.Free;
 	private float camWidth;
@@ -28,6 +29,8 @@ public class UnitController : MonoBehaviour
 	private float timer;
 	private float cooldown = 0f;
 
+	private Color unitColor;
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -37,6 +40,7 @@ public class UnitController : MonoBehaviour
 		Camera cam = Camera.main;
 		camHeight = cam.orthographicSize;
 		camWidth = camHeight * cam.aspect;
+		unitColor=GetComponent<SpriteRenderer>().color;
 	}
 
 	// Update is called once per frame
@@ -58,12 +62,13 @@ public class UnitController : MonoBehaviour
 		if (cooldown > 0)
 		{
 			cooldown -= Time.deltaTime;
-			spriteRenderer.color = new Color(0, 1f, 0, 0.25f);
+			unitColor.a = 0.25f;
 		}
 		else
 		{
-			spriteRenderer.color = new Color(0, 1f, 0, 1f);
+			unitColor.a = 1f;
 		}
+		spriteRenderer.color=unitColor;
 
 	}
 

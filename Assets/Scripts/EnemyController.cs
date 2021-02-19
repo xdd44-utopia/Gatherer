@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
 	public GameObject weapon;
 	public GameObject health;
 	public GameObject bloodFX;
+	public GameObject frozenFX;
 	private Vector2 targetPos;
 
 	//attack

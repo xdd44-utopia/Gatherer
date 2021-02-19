@@ -468,6 +468,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodFX: {fileID: 2966782554830514058, guid: 1d551fc2c898840f38dcd814d137e128, type: 3}
+  frozenFX: {fileID: 2966782554830514058, guid: 5ed1418e95e1209468bd285ffa93f3c3,
+    type: 3}
   attackDistance: 0.5
   attackInterval: 0.5
   atk: 0.5

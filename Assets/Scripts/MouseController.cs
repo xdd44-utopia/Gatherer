@@ -20,6 +20,8 @@ public class MouseController : MonoBehaviour
 	private float camHeight;
 	private float camWidth;
 
+	private bool doWeHaveFrozenHere=false;
+
 	// Start is called before the first frame update
 	void Start() {
 		Camera cam = Camera.main;
@@ -91,6 +93,9 @@ public class MouseController : MonoBehaviour
 		units = GameObject.FindGameObjectsWithTag("Unit");
 	
 		foreach (GameObject unit in units) {
+			if(unit.GetComponent<UnitController>().isFrozenUnit==true){
+				doWeHaveFrozenHere=true;
+			}
 			bool result = unit.GetComponent<UnitController>().tryGather(transform.position);
 			if (result) {
 				units_avi.Add(unit);
@@ -111,7 +116,7 @@ public class MouseController : MonoBehaviour
 
 	IEnumerator attack(float r, float d, float delay) {
 		yield return new WaitForSeconds(delay);
-		attacker.GetComponent<AttackController>().activate(r, d);
+		attacker.GetComponent<AttackController>().activate(r, d,doWeHaveFrozenHere);
     }
 
 

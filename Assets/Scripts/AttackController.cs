@@ -15,6 +15,8 @@ public class AttackController : MonoBehaviour
 	private float damage = 0f;
     public float rangeMutiplier;
 	public float brustMaxRange = 1.5f;
+	private bool freeze=false;
+	
 
     // Start is called before the first frame update
     void Start() {
@@ -36,6 +38,7 @@ public class AttackController : MonoBehaviour
 		GameObject[] units;
 		units = GameObject.FindGameObjectsWithTag("Enemy");
 		foreach (GameObject unit in units) {
+
 			if (Vector2.Distance(transform.position, unit.transform.position) < currentRadius) {
 				bool exists = false;
 				for (int i=0;i<targets.Count;i++) {
@@ -47,7 +50,11 @@ public class AttackController : MonoBehaviour
 				if (!exists) {
 					targets.Add(unit);
 					//unit.GetComponent<EnemyController>().getDamaged(damage * (radius - currentRadius) / radius);
-					unit.GetComponent<EnemyStatus>().getDamaged(damage * (radius - currentRadius) / radius);
+					if(freeze){
+						
+					
+					}
+					unit.GetComponent<EnemyStatus>().getDamaged(damage * (radius - currentRadius) / radius,freeze);
 				}
 			}
 		}
@@ -60,8 +67,9 @@ public class AttackController : MonoBehaviour
 		}
 	}
 
-	public void activate(float r, float d) {
-		Debug.Log(r + " " + d);
+	public void activate(float r, float d,bool isFrozenHere) {
+		if(isFrozenHere){freeze=true;}
+		//Debug.Log(r + " " + d);
 		radius = r;
 		damage = d;
 		currentRadius = 0f;
