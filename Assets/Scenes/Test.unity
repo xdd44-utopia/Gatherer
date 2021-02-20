@@ -5924,7 +5924,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Explosion
     clip: {fileID: 8300000, guid: 40758e26cd2e53042b8e385924e7faa6, type: 3}
-    volume: 0.4
+    volume: 1
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &1540248127
