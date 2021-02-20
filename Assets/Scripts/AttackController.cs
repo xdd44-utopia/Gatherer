@@ -79,7 +79,7 @@ public class AttackController : MonoBehaviour
 		status = Status.Active;
 		Camera.main.gameObject.GetComponent<CameraController>().triggerShake(radius);
 		GatherExplostionEffect(transform.position, Vector3.one * r * rangeMutiplier);
-		FindObjectOfType<AudioManager>().Play("Explosion", r / 4f);
+		FindObjectOfType<AudioManager>().Play("Explosion", r / 2f);
 	}
 
 	private enum Status {

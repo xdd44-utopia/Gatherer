@@ -28,7 +28,6 @@ public class AudioManager : MonoBehaviour
 		if(s==null)
 		return;
 		s.source.volume = s.volume * volumeMultiplier;
-		Debug.Log(name + " " + s.source.volume);
 		s.source.Play();
 	}
 }
