@@ -7,7 +7,8 @@ public class HealthbarController : MonoBehaviour
 	public GameObject[] bloodStains;
 	public float hp = 1f;
 	private float scaleBase = 0.5f;
-	
+	public float healRemainTime = 0f;
+	private float healamount = 0f;
 	void Update() {
 		if (hp <= 0)
 		{
@@ -15,10 +16,21 @@ public class HealthbarController : MonoBehaviour
 		}
 		transform.localScale = new Vector2(hp, transform.localScale.y);
 		transform.localPosition = new Vector2((hp / 2f - 0.5f) * scaleBase, transform.localPosition.y);
+        if (healRemainTime > 0 && hp<1f)
+        {
+			hp += healamount * Time.deltaTime;
+			healRemainTime -= Time.deltaTime;
+        }
 	}
 
 	public void getDamaged(float damage) {
 		hp -= damage;
+    }
+
+	public void getHealed(float amount,float remainTime)
+    {
+		healRemainTime = remainTime;
+		healamount = amount;
     }
 
     private void Death()
