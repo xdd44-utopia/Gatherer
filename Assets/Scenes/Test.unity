@@ -3369,6 +3369,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &923342252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 923342254}
+  - component: {fileID: 923342253}
+  m_Layer: 0
+  m_Name: QuitGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &923342253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923342252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 787d4df8c098c4c4dabbb72019048366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &923342254
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923342252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &947477216
 GameObject:
   m_ObjectHideFlags: 0
@@ -5792,29 +5835,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: UnitAttack
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+    clip: {fileID: 8300000, guid: 79df5e4576b0254449793f1f2fa25c6a, type: 3}
+    volume: 0.5
+    pitch: 1
     source: {fileID: 0}
   - name: UnitDeath
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+    clip: {fileID: 8300000, guid: bd215d47e286431448ba7bd0dd2db8c2, type: 3}
+    volume: 0.5
+    pitch: 1
     source: {fileID: 0}
   - name: EnemyAttack
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+    clip: {fileID: 8300000, guid: 40e5375396ae2994eb7dcbc85e917425, type: 3}
+    volume: 0.5
+    pitch: 1
     source: {fileID: 0}
   - name: EnemyDeath
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+    clip: {fileID: 8300000, guid: df71b8deb7e70cb4b83cf79eeef3fce4, type: 3}
+    volume: 0.5
+    pitch: 1
     source: {fileID: 0}
   - name: Theme
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+    clip: {fileID: 8300000, guid: c3dfcf684604d0340a8a604931e65901, type: 3}
+    volume: 0.4
+    pitch: 1
     source: {fileID: 0}
 --- !u!4 &1540248127
 Transform:
