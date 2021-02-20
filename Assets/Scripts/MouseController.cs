@@ -81,7 +81,7 @@ public class MouseController : MonoBehaviour
 		lineRenderer.positionCount = gatherableCnt;
 		Vector3[] pos = new Vector3[vertices.Count];
 		for (int i=0;i<vertices.Count;i++){
-			pos[i] = new Vector3(vertices[i].x, vertices[i].y, 1f);
+			pos[i] = new Vector3(vertices[i].x, vertices[i].y, 0.005f);
 		}
 		lineRenderer.SetPositions(pos);
 	}

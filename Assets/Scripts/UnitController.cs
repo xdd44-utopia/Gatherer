@@ -158,7 +158,7 @@ public class UnitController : MonoBehaviour
 				Vector2 dir = new Vector2(0, 0);
 				while (!done) {
 					float randAngle = Random.Range(0, Mathf.PI * 2);
-					dir = new Vector2(Mathf.Cos(randAngle) * unit_Status.maxGatherDist, Mathf.Sin(randAngle) * unit_Status.maxGatherDist);
+					dir = new Vector2(Mathf.Cos(randAngle) * Random.Range(0.0001f, unit_Status.maxGatherDist / 2), Mathf.Sin(randAngle) * Random.Range(0.0001f, unit_Status.maxGatherDist / 2));
 					ray = new Ray(tar, dir);
 					hit2D = Physics2D.RaycastAll(ray.origin, ray.direction, dir.magnitude);
 					isHit = false;
@@ -223,7 +223,7 @@ public class UnitController : MonoBehaviour
 	{
 		//掉血特效
 		GameObject blood = Instantiate(bloodFX, transform.position, Quaternion.identity);
-		blood.transform.position = new Vector3(blood.transform.position.x, blood.transform.position.y, 1f);
+		blood.transform.position = new Vector3(blood.transform.position.x, blood.transform.position.y, 0.01f);
 	}
 
 }

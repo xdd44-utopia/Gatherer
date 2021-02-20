@@ -339,6 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloodFX: {fileID: 2966782554830514058, guid: 98138024c452649988d33e0ad949f8b4, type: 3}
   health: {fileID: 5592019580905517298}
+  targetObj: {fileID: 0}
   isFrozenUnit: 0
 --- !u!1 &5592019580905517298
 GameObject:
@@ -438,6 +439,7 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 5bc30fb155f104b1799d6f3ba0de9022, type: 3}
   - {fileID: 52791555943683384, guid: 65ff63c454df640e2a35e1d2be68c6a2, type: 3}
   hp: 1
+  healRemainTime: 0
 --- !u!1 &8227699535874722596
 GameObject:
   m_ObjectHideFlags: 0
