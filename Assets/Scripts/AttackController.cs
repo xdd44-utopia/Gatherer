@@ -33,6 +33,7 @@ public class AttackController : MonoBehaviour
 			case Status.Active:
 				move();
 				check_prop();
+				check_splitedwall();
 				break;
 		}
 	}
@@ -101,8 +102,36 @@ public class AttackController : MonoBehaviour
 					}else if (unit.name == "prop_heal")
                     {
 						unit.GetComponent<prop_heal>().execute(radius);
+					}else if (unit.name == "splite_wall")
+                    {
+						unit.GetComponent<prop_splitedwall>().execute(radius);
 					}
 					
+				}
+			}
+		}
+	}
+
+	public void check_splitedwall()
+	{
+		GameObject[] units;
+		units = GameObject.FindGameObjectsWithTag("Wall");
+		foreach (GameObject unit in units)
+		{
+			if (unit.name== "splited_wall" && Vector2.Distance(transform.position, unit.transform.position) < currentRadius)
+			{
+				bool exists = false;
+				for (int i = 0; i < targets.Count; i++)
+				{
+					if (unit.GetInstanceID() == targets[i].GetInstanceID())
+					{
+						exists = true;
+						break;
+					}
+				}
+				if (!exists)
+				{
+					unit.GetComponent<prop_splitedwall>().execute(radius);
 				}
 			}
 		}
