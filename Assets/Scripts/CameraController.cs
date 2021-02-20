@@ -25,6 +25,7 @@ public class CameraController : MonoBehaviour
 
 
 	private Status status = Status.Friend;
+	private Status prevStatus;
 	private Vector2 pos;
 	private float size;
 	// Start is called before the first frame update
@@ -47,6 +48,9 @@ public class CameraController : MonoBehaviour
 			case Status.Shaking:
 				shake();
 				GetComponent<RipplePostProcesser>().RippleEffect();
+				break;
+			case Status.Controlled:
+				controlledMove();
 				break;
 		}
 	}
@@ -94,7 +98,7 @@ public class CameraController : MonoBehaviour
 
 	private void shake() {
 		if (shakeCount == shakeNum) {
-			status = Status.Friend;
+			status = prevStatus;
 		}
 		else if (shakeTimer == -1) {
 			shakeTimer = 0;
@@ -110,12 +114,27 @@ public class CameraController : MonoBehaviour
 		}
 	}
 
+	private void controlledMove() {
+		transform.position = Vector3.Lerp(transform.position, new Vector3(pos.x, pos.y, z), Time.deltaTime * followSpeed);
+		GetComponent<Camera>().orthographicSize = Mathf.Lerp(GetComponent<Camera>().orthographicSize, size, Time.deltaTime * scaleSpeed);
+	}
+
 	public void triggerShake(float rm) {
 		rangeMultiplier = rm;
+		prevStatus = status;
 		status = Status.Shaking;
 		shakeTimer = -1;
 		shakeCount = 0;
 		shakePos = transform.position;
+	}
+
+	public void lockCam(Vector2 p) {
+		pos = p;
+		status = Status.Controlled;
+	}
+
+	public void releaseCam() {
+		status = Status.Friend;
 	}
 
 	private enum Status {

@@ -308,7 +308,7 @@ MonoBehaviour:
   cooldownTime: 0
   moveSpeed_def: 0.01
   dragSpeed_def: 10
-  followSpeed_def: 1
+  followSpeed_def: 0.75
   gatherTime_def: 0.25
   angleRange_def: 0.1
   maxGatherDist_def: 2
@@ -426,3 +426,4 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 5bc30fb155f104b1799d6f3ba0de9022, type: 3}
   - {fileID: 52791555943683384, guid: 65ff63c454df640e2a35e1d2be68c6a2, type: 3}
   hp: 1
+  healRemainTime: 0

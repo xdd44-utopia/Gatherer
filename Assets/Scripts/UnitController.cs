@@ -36,7 +36,7 @@ public class UnitController : MonoBehaviour
 		cam = Camera.main.gameObject;
 		camHeight = cam.GetComponent<Camera>().orthographicSize;
 		camWidth = camHeight * cam.GetComponent<Camera>().aspect;
-		unitColor=GetComponent<SpriteRenderer>().color;
+		unitColor = GetComponent<SpriteRenderer>().color;
 	}
 
 	// Update is called once per frame
@@ -55,17 +55,16 @@ public class UnitController : MonoBehaviour
 				break;
 		}
 
-		if (cooldown > 0)
-		{
+		if (cooldown > 0) {
 			cooldown -= Time.deltaTime;
-			unitColor.a = 0.25f;
+			unitColor.a = 0.75f;
 		}
-		else
-		{
+		else {
 			unitColor.a = 1f;
 		}
 		spriteRenderer.color=unitColor;
 
+		//targetObj.transform.position = targetPos;
 	}
 
 	private void move()
@@ -109,7 +108,6 @@ public class UnitController : MonoBehaviour
 				targetPos.y = cam.transform.position.y + camHeight;
 				moveAngle = - Mathf.PI / 2f;
 			}
-			//targetObj.transform.position = targetPos;
 		}
 	}
 

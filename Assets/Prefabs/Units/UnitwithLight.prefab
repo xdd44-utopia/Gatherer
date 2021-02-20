@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 3659782809423441965}
   - component: {fileID: 3659782809423441967}
   m_Layer: 0
-  m_Name: Spotlight (1)
+  m_Name: Spotlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3659782809423441954}
   m_LocalRotation: {x: -0.21201736, y: -0.000000008397989, z: 0.00000001917337, w: 0.97726595}
-  m_LocalPosition: {x: 0, y: 0, z: -0.3}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1.8787199, y: 1.6033821, z: 1.0275904}
   m_Children: []
   m_Father: {fileID: 5188676767177171378}
@@ -125,12 +125,12 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 1.5
+  m_Range: 5
   m_SpotAngle: 85.9
   m_InnerSpotAngle: 67.57087
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 0.257
@@ -320,7 +320,7 @@ MonoBehaviour:
   cooldownTime: 0
   moveSpeed_def: 0.01
   dragSpeed_def: 10
-  followSpeed_def: 1
+  followSpeed_def: 0.75
   gatherTime_def: 0.25
   angleRange_def: 0.1
   maxGatherDist_def: 2
@@ -339,7 +339,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloodFX: {fileID: 2966782554830514058, guid: 98138024c452649988d33e0ad949f8b4, type: 3}
   health: {fileID: 5592019580905517298}
-  targetObj: {fileID: 0}
   isFrozenUnit: 0
 --- !u!1 &5592019580905517298
 GameObject:

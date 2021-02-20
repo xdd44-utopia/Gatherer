@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class AttackController : MonoBehaviour
 {
 	public GameObject brustFX;
+	public Light spotLight;
 	private const float speed = 7.5f;
 	private const float spriteScale = 4f;
 	private SpriteRenderer spriteRenderer;
@@ -18,9 +20,12 @@ public class AttackController : MonoBehaviour
 	private bool freeze = false;
 
 
+
+
 	// Start is called before the first frame update
 	void Start()
 	{
+		spotLight.intensity = 0;
 		transform.localScale = new Vector2(0f, 0f);
 		spriteRenderer = GetComponent<SpriteRenderer>();
 	}
@@ -36,6 +41,7 @@ public class AttackController : MonoBehaviour
 				check_splitedwall();
 				break;
 		}
+
 	}
 
 	private void move()
@@ -60,17 +66,30 @@ public class AttackController : MonoBehaviour
 				if (!exists)
 				{
 					targets.Add(unit);
-					//unit.GetComponent<EnemyController>().getDamaged(damage * (radius - currentRadius) / radius);
-					unit.GetComponent<EnemyStatus>().getDamaged(damage * (radius - currentRadius) / radius, freeze);
+					try {
+						unit.GetComponent<EnemyController>().getDamaged(damage * (radius - currentRadius) / radius);
+					} catch (Exception e) {
+						Debug.Log("...");
+					}
+					try {
+						unit.GetComponent<EnemyStatus>().getDamaged(damage * (radius - currentRadius) / radius, freeze);
+					} catch (Exception e) {
+						Debug.Log("...");
+					}
 					FindObjectOfType<AudioManager>().Play("UnitAttack", 1);
 				}
 			}
 		}
+
+		spotLight.intensity = currentRadius * 25;
+		spotLight.gameObject.transform.localPosition = new Vector3(0, 0, spotLight.intensity / 5);
+
 		transform.localScale = new Vector2(currentRadius * spriteScale, currentRadius * spriteScale);
 		spriteRenderer.color = new Color(1f, 1f, 1f, (radius - currentRadius) / radius / 2f);
 
 		if (currentRadius > radius)
 		{
+			spotLight.intensity = 0;
 			currentRadius = 0;
 			status = Status.Idle;
 		}

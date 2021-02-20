@@ -16,7 +16,9 @@ public class SpawnerController : MonoBehaviour
 		float camWidth = camHeight * cam.aspect;
 
 		pos = GameObject.FindGameObjectsWithTag("UnitSpawnPoint");
+	}
 
+	public void activate() {
 		for (int i=0;i<prefabs.Length;i++) {
 			for (int j=0;j<nums[i];j++) {
 				GameObject unit = Instantiate(prefabs[i]);

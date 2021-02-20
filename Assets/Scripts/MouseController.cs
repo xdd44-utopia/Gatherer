@@ -9,6 +9,12 @@ public class MouseController : MonoBehaviour
 	public float rangeMultiplier;
 	public float damageMultiplier;
 
+	public Light spotLight;
+	private float lightIntensityTar = 0;
+	private float lightIntensity;
+	private float lightChangeSpeed = 5f;
+	private float lightIntensityLimit = 5;
+
 	private Vector3 mousePos;
 	private LineRenderer lineRenderer;
 	private GameObject[] gatherable;
@@ -70,14 +76,24 @@ public class MouseController : MonoBehaviour
 
 		gatherable = GameObject.FindGameObjectsWithTag("Unit");
 		gatherableCnt = 1;
+		float cnt = 0;
 		foreach (GameObject unit in gatherable) {
 			bool result = unit.GetComponent<UnitController>().tryGather(transform.position);
 			if (result) {
 				gatherableCnt += 2;
 				vertices.Add(unit.transform.position);
 				vertices.Add(transform.position);
+				cnt++;
 			}
 		}
+
+		cnt = Mathf.Sqrt(cnt);
+		lightIntensityTar = cnt;
+		lightIntensityTar = lightIntensityTar < lightIntensityLimit ? lightIntensityTar : lightIntensityLimit;
+		lightIntensity = Mathf.Lerp(lightIntensity, lightIntensityTar, Time.deltaTime * lightChangeSpeed);
+		spotLight.intensity = lightIntensity;
+		spotLight.gameObject.transform.localPosition = new Vector3(0, 0, Mathf.Lerp(spotLight.gameObject.transform.localPosition.z, - lightIntensityTar / 5, Time.deltaTime * lightChangeSpeed));
+
 		lineRenderer.positionCount = gatherableCnt;
 		Vector3[] pos = new Vector3[vertices.Count];
 		for (int i=0;i<vertices.Count;i++){
@@ -102,6 +118,7 @@ public class MouseController : MonoBehaviour
 				cnt++;
 			}
 		}
+
 		if (cnt > 1) {
 			//GatherExplostionEffect();
 			foreach (GameObject unit_avi in units_avi)
@@ -112,6 +129,10 @@ public class MouseController : MonoBehaviour
 			attacker.transform.position = mousePos;
 			StartCoroutine(attack(cnt * rangeMultiplier, cnt * damageMultiplier, units_avi[0].GetComponent<UnitController>().getGatherTime()));
 		}
+	}
+
+	public int getGatherableCount() {
+		return gatherableCnt / 2;
 	}
 
 	IEnumerator attack(float r, float d, float delay) {
