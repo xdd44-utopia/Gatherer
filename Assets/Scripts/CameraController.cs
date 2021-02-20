@@ -43,6 +43,7 @@ public class CameraController : MonoBehaviour
 				break;
 			case Status.Shaking:
 				shake();
+				GetComponent<RipplePostProcesser>().RippleEffect();
 				break;
 		}
 	}
