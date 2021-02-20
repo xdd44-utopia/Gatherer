@@ -23,7 +23,7 @@ public class HealthbarController : MonoBehaviour
 
     private void Death()
     {
-		FindObjectOfType<AudioManager>().Play("EnemyDeath");
+		FindObjectOfType<AudioManager>().Play("EnemyDeath", 1);
 		GameObject bloodStain = Instantiate(bloodStains[Random.Range(0, bloodStains.Length)], transform.position, Quaternion.identity);
 		bloodStain.transform.position = new Vector3(bloodStain.transform.position.x, bloodStain.transform.position.y, 1f);
         Destroy(transform.parent.gameObject, 0f);

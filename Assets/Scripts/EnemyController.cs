@@ -37,7 +37,7 @@ public class EnemyController : MonoBehaviour
 		attackTimer += Time.deltaTime;
 		if (attackTimer > attackInterval) {
 			weapon.GetComponent<EnemyWeaponController>().activate(attackRange, attackDamage);
-			FindObjectOfType<AudioManager>().Play("EnemyAttack");
+			FindObjectOfType<AudioManager>().Play("EnemyAttack", 1);
 			attackTimer = 0f;
 		}
 

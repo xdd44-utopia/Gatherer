@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Unit
   - Enemy
+  - UnitSpawnPoint
+  - Wall
   layers:
   - Default
   - TransparentFX

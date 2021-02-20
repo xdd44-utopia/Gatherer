@@ -55,7 +55,7 @@ public class AttackController : MonoBehaviour
 					
 					}
 					unit.GetComponent<EnemyStatus>().getDamaged(damage * (radius - currentRadius) / radius,freeze);
-					FindObjectOfType<AudioManager>().Play("UnitAttack");
+					FindObjectOfType<AudioManager>().Play("UnitAttack", 1);
 				}
 			}
 		}
@@ -79,7 +79,7 @@ public class AttackController : MonoBehaviour
 		status = Status.Active;
 		Camera.main.gameObject.GetComponent<CameraController>().triggerShake(radius);
 		GatherExplostionEffect(transform.position, Vector3.one * r * rangeMutiplier);
-		FindObjectOfType<AudioManager>().Play("Explosion");
+		FindObjectOfType<AudioManager>().Play("Explosion", r / 4f);
 	}
 
 	private enum Status {

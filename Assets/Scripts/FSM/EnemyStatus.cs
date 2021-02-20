@@ -31,7 +31,7 @@ public class EnemyStatus : MonoBehaviour
     public void getDamaged(float damage,bool isFrozenHere)
 	{
 		if(!isFrozenHere){
-			FindObjectOfType<AudioManager>().Play("UnitAttack");
+			FindObjectOfType<AudioManager>().Play("UnitAttack", 1);
 		}
 		GameObject blood = Instantiate(bloodFX, transform.position, Quaternion.identity);
 		blood.transform.position = new Vector3(blood.transform.position.x, blood.transform.position.y, 1f);
