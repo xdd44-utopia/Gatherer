@@ -13,48 +13,54 @@ public class AttackController : MonoBehaviour
 	public float currentRadius = 0f;
 	private List<GameObject> targets;
 	private float damage = 0f;
-    public float rangeMutiplier;
+	public float rangeMutiplier;
 	public float brustMaxRange = 1.5f;
-	private bool freeze=false;
-	
+	private bool freeze = false;
 
-    // Start is called before the first frame update
-    void Start() {
+
+	// Start is called before the first frame update
+	void Start()
+	{
 		transform.localScale = new Vector2(0f, 0f);
 		spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
 	// Update is called once per frame
-	void Update() {
-		switch (status) {
+	void Update()
+	{
+		switch (status)
+		{
 			case Status.Active:
 				move();
+				check_prop();
 				break;
 		}
 	}
 
-	private void move() {
+	private void move()
+	{
 		currentRadius += Time.deltaTime * speed;
 		GameObject[] units;
 		units = GameObject.FindGameObjectsWithTag("Enemy");
-		foreach (GameObject unit in units) {
+		foreach (GameObject unit in units)
+		{
 
-			if (Vector2.Distance(transform.position, unit.transform.position) < currentRadius) {
+			if (Vector2.Distance(transform.position, unit.transform.position) < currentRadius)
+			{
 				bool exists = false;
-				for (int i=0;i<targets.Count;i++) {
-					if (unit.GetInstanceID() == targets[i].GetInstanceID()) {
+				for (int i = 0; i < targets.Count; i++)
+				{
+					if (unit.GetInstanceID() == targets[i].GetInstanceID())
+					{
 						exists = true;
 						break;
 					}
 				}
-				if (!exists) {
+				if (!exists)
+				{
 					targets.Add(unit);
 					//unit.GetComponent<EnemyController>().getDamaged(damage * (radius - currentRadius) / radius);
-					if(freeze){
-						
-					
-					}
-					unit.GetComponent<EnemyStatus>().getDamaged(damage * (radius - currentRadius) / radius,freeze);
+					unit.GetComponent<EnemyStatus>().getDamaged(damage * (radius - currentRadius) / radius, freeze);
 					FindObjectOfType<AudioManager>().Play("UnitAttack", 1);
 				}
 			}
@@ -62,15 +68,44 @@ public class AttackController : MonoBehaviour
 		transform.localScale = new Vector2(currentRadius * spriteScale, currentRadius * spriteScale);
 		spriteRenderer.color = new Color(1f, 1f, 1f, (radius - currentRadius) / radius / 2f);
 
-		if (currentRadius > radius) {
+		if (currentRadius > radius)
+		{
 			currentRadius = 0;
 			status = Status.Idle;
 		}
 	}
 
-	public void activate(float r, float d,bool isFrozenHere) {
-		if(isFrozenHere){
-			freeze=true;
+	public void check_prop()
+	{
+		GameObject[] props;
+		props = GameObject.FindGameObjectsWithTag("prop");
+		foreach (GameObject unit in props)
+		{
+			if (Vector2.Distance(transform.position, unit.transform.position) < currentRadius)
+			{
+				bool exists = false;
+				for (int i = 0; i < targets.Count; i++)
+				{
+					if (unit.GetInstanceID() == targets[i].GetInstanceID())
+					{
+						exists = true;
+						break;
+					}
+				}
+				if (!exists)
+				{
+					targets.Add(unit);
+					unit.GetComponent<prop_attract>().execute(radius);
+				}
+			}
+		}
+	}
+
+	public void activate(float r, float d, bool isFrozenHere)
+	{
+		if (isFrozenHere)
+		{
+			freeze = true;
 		}
 		radius = r;
 		damage = d;
@@ -79,10 +114,11 @@ public class AttackController : MonoBehaviour
 		status = Status.Active;
 		Camera.main.gameObject.GetComponent<CameraController>().triggerShake(radius);
 		GatherExplostionEffect(transform.position, Vector3.one * r * rangeMutiplier);
-		FindObjectOfType<AudioManager>().Play("Explosion", r / 2f);
+		FindObjectOfType<AudioManager>().Play("Explosion", r / 4f);
 	}
 
-	private enum Status {
+	private enum Status
+	{
 		Idle,
 		Active
 	}
@@ -94,7 +130,7 @@ public class AttackController : MonoBehaviour
 		GameObject effectGO = Instantiate(brustFX, pos, Quaternion.identity);
 		effectGO.transform.localScale = sc.x * 6 > brustMaxRange ? Vector3.one * brustMaxRange / 6 : sc;
 
-		effectGO.transform.GetChild(0).localScale = sc.x * 6 > brustMaxRange? Vector3.one * brustMaxRange : sc * 6;
+		effectGO.transform.GetChild(0).localScale = sc.x * 6 > brustMaxRange ? Vector3.one * brustMaxRange : sc * 6;
 		FindObjectOfType<RipplePostProcesser>().RippleEffect();
 	}
 }
