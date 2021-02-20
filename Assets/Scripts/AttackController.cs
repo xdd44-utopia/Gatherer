@@ -95,7 +95,14 @@ public class AttackController : MonoBehaviour
 				if (!exists)
 				{
 					targets.Add(unit);
-					unit.GetComponent<prop_attract>().execute(radius);
+                    if (unit.name == "prop_attract")
+                    {
+						unit.GetComponent<prop_attract>().execute(radius);
+					}else if (unit.name == "prop_heal")
+                    {
+						unit.GetComponent<prop_heal>().execute(radius);
+					}
+					
 				}
 			}
 		}

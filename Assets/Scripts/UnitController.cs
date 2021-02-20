@@ -201,6 +201,11 @@ public class UnitController : MonoBehaviour
 		DamageEffect();
 	}
 
+	public void getHealed(float amount,float remainTime)
+	{
+		health.GetComponent<HealthbarController>().getHealed(amount,remainTime);
+	}
+
 	public float getGatherTime()
 	{
 		return unit_Status.gatherTime;

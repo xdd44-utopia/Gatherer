@@ -300,37 +300,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &4554894
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &6665048
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,6 +581,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &18028043
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &20075998
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,37 +714,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &26654819
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 2
-    - _DstBlend: 2
-    - _SrcBlend: 1
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &27755873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -766,7 +735,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1486277466}
+      objectReference: {fileID: 1957446611}
     - target: {fileID: 1176376809881682139, guid: feaa36c4ea8c14b3f9e542909e6b1717,
         type: 3}
       propertyPath: m_CastShadows
@@ -781,7 +750,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1664724214}
+      objectReference: {fileID: 495429453}
     - target: {fileID: 3018903659344703017, guid: feaa36c4ea8c14b3f9e542909e6b1717,
         type: 3}
       propertyPath: m_RootOrder
@@ -851,7 +820,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1730797390}
+      objectReference: {fileID: 1933957199}
     - target: {fileID: 8648594919909891091, guid: feaa36c4ea8c14b3f9e542909e6b1717,
         type: 3}
       propertyPath: m_Name
@@ -948,37 +917,6 @@ MonoBehaviour:
   _Alpha: 1
   ShaderChange: 0
   ActiveUpdate: 1
---- !u!21 &28888197
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &30035833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,6 +1338,7 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 5bc30fb155f104b1799d6f3ba0de9022, type: 3}
   - {fileID: 52791555943683384, guid: 65ff63c454df640e2a35e1d2be68c6a2, type: 3}
   hp: 1
+  healRemainTime: 0
 --- !u!212 &49290028
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1675,7 +1614,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 650088253}
+      objectReference: {fileID: 1153913028}
     - target: {fileID: 1176376809881682139, guid: feaa36c4ea8c14b3f9e542909e6b1717,
         type: 3}
       propertyPath: m_CastShadows
@@ -1690,7 +1629,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1290889644}
+      objectReference: {fileID: 574846738}
     - target: {fileID: 2210620287840757568, guid: feaa36c4ea8c14b3f9e542909e6b1717,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1770,7 +1709,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1830387577}
+      objectReference: {fileID: 2064448461}
     - target: {fileID: 8648594919909891091, guid: feaa36c4ea8c14b3f9e542909e6b1717,
         type: 3}
       propertyPath: m_Name
@@ -2608,6 +2547,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &110491478
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &117475467
 GameObject:
   m_ObjectHideFlags: 0
@@ -2791,37 +2761,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &128050247
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &129958526
 GameObject:
   m_ObjectHideFlags: 0
@@ -4129,6 +4068,7 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 5bc30fb155f104b1799d6f3ba0de9022, type: 3}
   - {fileID: 52791555943683384, guid: 65ff63c454df640e2a35e1d2be68c6a2, type: 3}
   hp: 1
+  healRemainTime: 0
 --- !u!212 &190821648
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4610,6 +4550,7 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 5bc30fb155f104b1799d6f3ba0de9022, type: 3}
   - {fileID: 52791555943683384, guid: 65ff63c454df640e2a35e1d2be68c6a2, type: 3}
   hp: 1
+  healRemainTime: 0
 --- !u!212 &221454598
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4752,6 +4693,37 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!21 &227788537
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &234247853
 GameObject:
   m_ObjectHideFlags: 0
@@ -6772,37 +6744,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!21 &299896216
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &314345873
 GameObject:
   m_ObjectHideFlags: 0
@@ -7052,7 +6993,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 792421674}
+  - {fileID: 1470838276}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7430,7 +7371,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1669434506}
+  - {fileID: 693926704}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8495,6 +8436,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &356421571
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &358417741
 GameObject:
   m_ObjectHideFlags: 0
@@ -11884,6 +11856,7 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 5bc30fb155f104b1799d6f3ba0de9022, type: 3}
   - {fileID: 52791555943683384, guid: 65ff63c454df640e2a35e1d2be68c6a2, type: 3}
   hp: 1
+  healRemainTime: 0
 --- !u!212 &490115562
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11934,6 +11907,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &495429453
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &495870057
 GameObject:
   m_ObjectHideFlags: 0
@@ -13018,6 +13022,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f1ea4fd940b4518b55684c6d055716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!21 &526328784
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &533729374
 GameObject:
   m_ObjectHideFlags: 0
@@ -14573,6 +14608,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &574846738
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &588623298
 GameObject:
   m_ObjectHideFlags: 0
@@ -16200,37 +16266,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &641341400
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &649699469
 GameObject:
   m_ObjectHideFlags: 0
@@ -16430,37 +16465,6 @@ MonoBehaviour:
     idle: idle
     attack: attack
     move: move
---- !u!21 &650088253
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &652131242
 GameObject:
   m_ObjectHideFlags: 0
@@ -16824,6 +16828,7 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 5bc30fb155f104b1799d6f3ba0de9022, type: 3}
   - {fileID: 52791555943683384, guid: 65ff63c454df640e2a35e1d2be68c6a2, type: 3}
   hp: 1
+  healRemainTime: 0
 --- !u!212 &667050470
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17748,6 +17753,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &693926704
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 2
+    - _DstBlend: 2
+    - _SrcBlend: 1
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &696921276
 GameObject:
   m_ObjectHideFlags: 0
@@ -19689,6 +19725,7 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 5bc30fb155f104b1799d6f3ba0de9022, type: 3}
   - {fileID: 52791555943683384, guid: 65ff63c454df640e2a35e1d2be68c6a2, type: 3}
   hp: 1
+  healRemainTime: 0
 --- !u!212 &760921664
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21203,37 +21240,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &792421674
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &793204704
 GameObject:
   m_ObjectHideFlags: 0
@@ -21583,7 +21589,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1743347084}
+  - {fileID: 356421571}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22860,7 +22866,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1341866670}
+      objectReference: {fileID: 995878556}
     - target: {fileID: 1176376809881682139, guid: feaa36c4ea8c14b3f9e542909e6b1717,
         type: 3}
       propertyPath: m_CastShadows
@@ -22875,7 +22881,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1732384560}
+      objectReference: {fileID: 1476244296}
     - target: {fileID: 3018903659344703017, guid: feaa36c4ea8c14b3f9e542909e6b1717,
         type: 3}
       propertyPath: m_RootOrder
@@ -22945,7 +22951,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1980788208}
+      objectReference: {fileID: 526328784}
     - target: {fileID: 8648594919909891091, guid: feaa36c4ea8c14b3f9e542909e6b1717,
         type: 3}
       propertyPath: m_Name
@@ -24530,6 +24536,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &876706646
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &877757354
 GameObject:
   m_ObjectHideFlags: 0
@@ -24622,37 +24659,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!21 &880770070
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 2
-    - _DstBlend: 2
-    - _SrcBlend: 1
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &882997002
 GameObject:
   m_ObjectHideFlags: 0
@@ -26821,6 +26827,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &954795192
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &954885318
 GameObject:
   m_ObjectHideFlags: 0
@@ -27775,6 +27812,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &985379395
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &990601774
 GameObject:
   m_ObjectHideFlags: 0
@@ -27877,6 +27945,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &993588674
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 2
+    - _DstBlend: 2
+    - _SrcBlend: 1
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &993615985
 GameObject:
   m_ObjectHideFlags: 0
@@ -28056,6 +28155,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &995878556
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1004551104
 GameObject:
   m_ObjectHideFlags: 0
@@ -31283,6 +31413,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &1153913028
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1155262702
 GameObject:
   m_ObjectHideFlags: 0
@@ -31797,6 +31958,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &1190169327
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1191902523
 GameObject:
   m_ObjectHideFlags: 0
@@ -32359,6 +32551,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &1196594739
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1200977272
 GameObject:
   m_ObjectHideFlags: 0
@@ -33388,37 +33611,6 @@ Transform:
   m_Father: {fileID: 1348286681}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1250870421
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 2
-    - _DstBlend: 2
-    - _SrcBlend: 1
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1261286262
 GameObject:
   m_ObjectHideFlags: 0
@@ -33521,37 +33713,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &1265642126
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1265884454
 GameObject:
   m_ObjectHideFlags: 0
@@ -34160,6 +34321,7 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 5bc30fb155f104b1799d6f3ba0de9022, type: 3}
   - {fileID: 52791555943683384, guid: 65ff63c454df640e2a35e1d2be68c6a2, type: 3}
   hp: 1
+  healRemainTime: 0
 --- !u!212 &1290515902
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34210,37 +34372,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &1290889644
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1294848007
 GameObject:
   m_ObjectHideFlags: 0
@@ -35349,37 +35480,6 @@ Transform:
   m_Father: {fileID: 717025752}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1341866670
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1342555665
 GameObject:
   m_ObjectHideFlags: 0
@@ -35659,7 +35759,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 299896216}
+  - {fileID: 1721079902}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35761,7 +35861,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 641341400}
+  - {fileID: 1397395953}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35869,7 +35969,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1265642126}
+      objectReference: {fileID: 1669482281}
     - target: {fileID: 6369892306954145970, guid: 9d4c9a66d39ca4deab408db585713022,
         type: 3}
       propertyPath: m_Name
@@ -35894,7 +35994,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 4554894}
+      objectReference: {fileID: 985379395}
     - target: {fileID: 8445271207068390238, guid: 9d4c9a66d39ca4deab408db585713022,
         type: 3}
       propertyPath: m_CastShadows
@@ -35909,7 +36009,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1930693091}
+      objectReference: {fileID: 1812037229}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d4c9a66d39ca4deab408db585713022, type: 3}
 --- !u!4 &1345291044 stripped
@@ -36628,6 +36728,7 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 5bc30fb155f104b1799d6f3ba0de9022, type: 3}
   - {fileID: 52791555943683384, guid: 65ff63c454df640e2a35e1d2be68c6a2, type: 3}
   hp: 1
+  healRemainTime: 0
 --- !u!212 &1379545121
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37585,6 +37686,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &1397395953
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1406134646
 GameObject:
   m_ObjectHideFlags: 0
@@ -38796,7 +38928,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2097672068}
+  - {fileID: 1196594739}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -38957,6 +39089,7 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 5bc30fb155f104b1799d6f3ba0de9022, type: 3}
   - {fileID: 52791555943683384, guid: 65ff63c454df640e2a35e1d2be68c6a2, type: 3}
   hp: 1
+  healRemainTime: 0
 --- !u!212 &1455232473
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39037,6 +39170,37 @@ Transform:
   m_Father: {fileID: 814913852}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1470838276
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1471836832
 GameObject:
   m_ObjectHideFlags: 0
@@ -39318,37 +39482,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &1475037303
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1476078878
 GameObject:
   m_ObjectHideFlags: 0
@@ -39451,6 +39584,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &1476244296
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1478649758
 GameObject:
   m_ObjectHideFlags: 0
@@ -39602,7 +39766,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1475037303}
+  - {fileID: 1190169327}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -39666,68 +39830,6 @@ Transform:
   m_Father: {fileID: 1155262703}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1484105899
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!21 &1486277466
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1486782869
 GameObject:
   m_ObjectHideFlags: 0
@@ -40487,7 +40589,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1484105899}
+  - {fileID: 110491478}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -41081,6 +41183,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &1535084397
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1539493700
 GameObject:
   m_ObjectHideFlags: 0
@@ -41591,7 +41724,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 880770070}
+  - {fileID: 1775487558}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -43216,7 +43349,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 26654819}
+  - {fileID: 993588674}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -45208,7 +45341,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &1664724214
+--- !u!21 &1669482281
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -45236,37 +45369,6 @@ Material:
     - _BlendOp: 0
     - _DstBlend: 10
     - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!21 &1669434506
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 2
-    - _DstBlend: 2
-    - _SrcBlend: 1
     - _Z: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -46186,6 +46288,7 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 5bc30fb155f104b1799d6f3ba0de9022, type: 3}
   - {fileID: 52791555943683384, guid: 65ff63c454df640e2a35e1d2be68c6a2, type: 3}
   hp: 1
+  healRemainTime: 0
 --- !u!212 &1707692100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -46783,6 +46886,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &1721079902
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1727197220
 GameObject:
   m_ObjectHideFlags: 0
@@ -47141,99 +47275,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &1730797390
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!21 &1732384560
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!21 &1743347084
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1748600250
 GameObject:
   m_ObjectHideFlags: 0
@@ -48173,6 +48214,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &1775487558
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 2
+    - _DstBlend: 2
+    - _SrcBlend: 1
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1778278872
 GameObject:
   m_ObjectHideFlags: 0
@@ -49902,7 +49974,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1250870421}
+  - {fileID: 2086160566}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -49934,6 +50006,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &1812037229
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1818382157
 GameObject:
   m_ObjectHideFlags: 0
@@ -50245,37 +50348,6 @@ Transform:
   m_Father: {fileID: 1424438187}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1830387577
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1831119862
 GameObject:
   m_ObjectHideFlags: 0
@@ -52902,7 +52974,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &1930693091
+--- !u!21 &1933957199
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -53458,6 +53530,37 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!21 &1957446611
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1959816655
 GameObject:
   m_ObjectHideFlags: 0
@@ -54170,6 +54273,7 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 5bc30fb155f104b1799d6f3ba0de9022, type: 3}
   - {fileID: 52791555943683384, guid: 65ff63c454df640e2a35e1d2be68c6a2, type: 3}
   hp: 1
+  healRemainTime: 0
 --- !u!212 &1975118069
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -54220,37 +54324,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &1980788208
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1983920037
 GameObject:
   m_ObjectHideFlags: 0
@@ -54321,7 +54394,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 128050247}
+  - {fileID: 954795192}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -54850,7 +54923,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2044036578}
+      objectReference: {fileID: 876706646}
     - target: {fileID: 1176376809881682139, guid: feaa36c4ea8c14b3f9e542909e6b1717,
         type: 3}
       propertyPath: m_CastShadows
@@ -54865,7 +54938,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2072990292}
+      objectReference: {fileID: 227788537}
     - target: {fileID: 3018903659344703017, guid: feaa36c4ea8c14b3f9e542909e6b1717,
         type: 3}
       propertyPath: m_RootOrder
@@ -54935,7 +55008,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 28888197}
+      objectReference: {fileID: 18028043}
     - target: {fileID: 8648594919909891091, guid: feaa36c4ea8c14b3f9e542909e6b1717,
         type: 3}
       propertyPath: m_Name
@@ -55487,68 +55560,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &2042611039
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!21 &2044036578
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2045348553
 GameObject:
   m_ObjectHideFlags: 0
@@ -55911,6 +55922,7 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 5bc30fb155f104b1799d6f3ba0de9022, type: 3}
   - {fileID: 52791555943683384, guid: 65ff63c454df640e2a35e1d2be68c6a2, type: 3}
   hp: 1
+  healRemainTime: 0
 --- !u!212 &2055135646
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -56141,6 +56153,7 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 39e06b80ad2a14d02aaa3ca01f96c745, type: 3}
   - {fileID: 52791555943683384, guid: dc146867942aa45a29c31fa4f5ee5c1f, type: 3}
   hp: 1
+  healRemainTime: 0
 --- !u!212 &2061144481
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -56159,7 +56172,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2042611039}
+  - {fileID: 1535084397}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -56411,6 +56424,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &2064448461
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 0
+    - _DstBlend: 10
+    - _SrcBlend: 2
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2072816256
 GameObject:
   m_ObjectHideFlags: 0
@@ -56590,37 +56634,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &2072990292
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2075359372
 GameObject:
   m_ObjectHideFlags: 0
@@ -56964,6 +56977,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &2086160566
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/AL/Normal
+  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0
+    - _BlendOp: 2
+    - _DstBlend: 2
+    - _SrcBlend: 1
+    - _Z: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2088012520
 GameObject:
   m_ObjectHideFlags: 0
@@ -57066,37 +57110,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &2097672068
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/AL/Normal
-  m_Shader: {fileID: 4800000, guid: 50621b8f1b2baaf408f23915ff4e270b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Alpha: 0
-    - _BlendOp: 0
-    - _DstBlend: 10
-    - _SrcBlend: 2
-    - _Z: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2097980573
 GameObject:
   m_ObjectHideFlags: 0
@@ -57888,6 +57901,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &707878817815092467
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 707878817293105747, guid: 687458b618dc34a5cbda067351c8b6e8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707878817293105747, guid: 687458b618dc34a5cbda067351c8b6e8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 707878817293105747, guid: 687458b618dc34a5cbda067351c8b6e8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 707878817293105747, guid: 687458b618dc34a5cbda067351c8b6e8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.3699656
+      objectReference: {fileID: 0}
+    - target: {fileID: 707878817293105747, guid: 687458b618dc34a5cbda067351c8b6e8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 707878817293105747, guid: 687458b618dc34a5cbda067351c8b6e8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707878817293105747, guid: 687458b618dc34a5cbda067351c8b6e8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707878817293105747, guid: 687458b618dc34a5cbda067351c8b6e8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707878817293105747, guid: 687458b618dc34a5cbda067351c8b6e8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707878817293105747, guid: 687458b618dc34a5cbda067351c8b6e8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707878817293105747, guid: 687458b618dc34a5cbda067351c8b6e8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707878817293105774, guid: 687458b618dc34a5cbda067351c8b6e8,
+        type: 3}
+      propertyPath: m_Name
+      value: prop_attract
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 687458b618dc34a5cbda067351c8b6e8, type: 3}
 --- !u!1 &6553772284468996754
 GameObject:
   m_ObjectHideFlags: 0
@@ -57916,74 +57998,74 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &7615406348411912072
+--- !u!1001 &8439415390347034356
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7615406348597983762, guid: 687458b618dc34a5cbda067351c8b6e8,
+    - target: {fileID: 8439415390167891256, guid: 964bd4fc20c944d488eaca6958410f13,
+        type: 3}
+      propertyPath: m_Name
+      value: prop_heal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439415390167891259, guid: 964bd4fc20c944d488eaca6958410f13,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 16
       objectReference: {fileID: 0}
-    - target: {fileID: 7615406348597983762, guid: 687458b618dc34a5cbda067351c8b6e8,
+    - target: {fileID: 8439415390167891259, guid: 964bd4fc20c944d488eaca6958410f13,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.74
+      value: 2.61
       objectReference: {fileID: 0}
-    - target: {fileID: 7615406348597983762, guid: 687458b618dc34a5cbda067351c8b6e8,
+    - target: {fileID: 8439415390167891259, guid: 964bd4fc20c944d488eaca6958410f13,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.52
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7615406348597983762, guid: 687458b618dc34a5cbda067351c8b6e8,
+    - target: {fileID: 8439415390167891259, guid: 964bd4fc20c944d488eaca6958410f13,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.3699656
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7615406348597983762, guid: 687458b618dc34a5cbda067351c8b6e8,
+    - target: {fileID: 8439415390167891259, guid: 964bd4fc20c944d488eaca6958410f13,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7615406348597983762, guid: 687458b618dc34a5cbda067351c8b6e8,
+    - target: {fileID: 8439415390167891259, guid: 964bd4fc20c944d488eaca6958410f13,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7615406348597983762, guid: 687458b618dc34a5cbda067351c8b6e8,
+    - target: {fileID: 8439415390167891259, guid: 964bd4fc20c944d488eaca6958410f13,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7615406348597983762, guid: 687458b618dc34a5cbda067351c8b6e8,
+    - target: {fileID: 8439415390167891259, guid: 964bd4fc20c944d488eaca6958410f13,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7615406348597983762, guid: 687458b618dc34a5cbda067351c8b6e8,
+    - target: {fileID: 8439415390167891259, guid: 964bd4fc20c944d488eaca6958410f13,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7615406348597983762, guid: 687458b618dc34a5cbda067351c8b6e8,
+    - target: {fileID: 8439415390167891259, guid: 964bd4fc20c944d488eaca6958410f13,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7615406348597983762, guid: 687458b618dc34a5cbda067351c8b6e8,
+    - target: {fileID: 8439415390167891259, guid: 964bd4fc20c944d488eaca6958410f13,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7615406348597983775, guid: 687458b618dc34a5cbda067351c8b6e8,
-        type: 3}
-      propertyPath: m_Name
-      value: prop_attract
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 687458b618dc34a5cbda067351c8b6e8, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 964bd4fc20c944d488eaca6958410f13, type: 3}
