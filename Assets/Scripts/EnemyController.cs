@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
 
 	public GameObject weapon;
 	public GameObject health;
+	public float defence;
 	public GameObject bloodFX;
 	public GameObject frozenFX;
 	private Vector2 targetPos;
@@ -24,7 +25,7 @@ public class EnemyController : MonoBehaviour
 	private const float kr = 0.05f;
 	private const float repulsiveRange = 1000f;
 	private const float repLimit = 0.1f;
-	private const float followSpeed = 0.25f;
+	public float followSpeed;
 
 	// Start is called before the first frame update
 	void Start() {
@@ -37,31 +38,11 @@ public class EnemyController : MonoBehaviour
 		attackTimer += Time.deltaTime;
 		if (attackTimer > attackInterval) {
 			weapon.GetComponent<EnemyWeaponController>().activate(attackRange, attackDamage);
-			FindObjectOfType<AudioManager>().Play("EnemyAttack");
+			FindObjectOfType<AudioManager>().Play("EnemyAttack", 1);
 			attackTimer = 0f;
 		}
 
 		move2();
-	}
-
-	void move1() {
-		GameObject[] units;
-		GameObject target = null;
-		float minDist = 2000f;
-		units = GameObject.FindGameObjectsWithTag("Unit");
-		foreach (GameObject unit in units) {
-			if (Vector2.Distance(transform.position, unit.transform.position) < minDist) {
-				minDist = Vector2.Distance(transform.position, unit.transform.position);
-				target = unit;
-			}
-		}
-		if (units.Length > 0) {
-			targetPos = target.transform.position;
-		}
-		else {
-			targetPos = transform.position;
-		}
-		transform.position = Vector2.Lerp(transform.position, targetPos, Time.deltaTime * followSpeed);
 	}
 
 	void move2() {
@@ -107,6 +88,6 @@ public class EnemyController : MonoBehaviour
 	
 	public void getDamaged(float damage) {
 		Instantiate(bloodFX, transform.position, Quaternion.identity);
-		health.GetComponent<HealthbarController>().getDamaged(damage);
+		health.GetComponent<HealthbarController>().getDamaged(damage / defence);
 	}
 }

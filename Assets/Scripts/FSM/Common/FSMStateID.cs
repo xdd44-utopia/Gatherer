@@ -36,7 +36,7 @@ namespace AI.FSM
         /// <summary>
         /// 巡逻
         /// </summary>
-        Patrolling,
+        Patroling,
         /// <summary>
         /// 射击
         /// </summary>

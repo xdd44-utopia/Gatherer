@@ -21,7 +21,6 @@ namespace AI.FSM
         public override void ActionState(FSMBase fsm)
         {
             base.ActionState(fsm);
-            Debug.DrawLine(fsm.transform.position, fsm.targetTF.position);
             if (attackTime <= Time.time)
             {
                 fsm.anim.SetBool(fsm.status.chPrams.attack, true);

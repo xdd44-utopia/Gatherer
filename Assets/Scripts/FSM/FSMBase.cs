@@ -92,6 +92,9 @@ namespace AI.FSM
         public EnemyStatus status;
         [HideInInspector]
         public Transform targetTF;
+        [HideInInspector]
+        public Dictionary<int, Transform> allTargetTF;
+        public float minDistance;
         [Tooltip("攻击目标标签")]
         public string targetTags = "Unit";
         public float runSpeed = 2;

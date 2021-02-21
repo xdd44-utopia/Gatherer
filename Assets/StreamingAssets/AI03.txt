@@ -1,0 +1,15 @@
+[Idle]
+NoHealth>Dead
+WithinAttackRange>Shooting
+
+[Dead]
+
+[Shooting]
+NoHealth>Dead
+AllOutOfAttackRange>Default
+WithinMinDist>Patroling
+
+[Patroling]
+NoHealth>Dead
+AllOutOfAttackRange>Default
+CompletePatrol>Shooting

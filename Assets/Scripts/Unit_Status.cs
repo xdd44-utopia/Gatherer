@@ -57,8 +57,8 @@ public class Unit_Status : MonoBehaviour
     }
     public void execute_prop_attract(float remain_time)
     {
-        followSpeed *= 1.5f;
-        maxGatherDist *= 1.5f;
+        followSpeed *= 2f;
+        maxGatherDist *= 2f;
         timer = remain_time;
         return;
     }
