@@ -5835,7 +5835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: UnitAttack
-    clip: {fileID: 8300000, guid: 79df5e4576b0254449793f1f2fa25c6a, type: 3}
+    clip: {fileID: 8300000, guid: 9be613918a2e3324bb8c8605c2721dc8, type: 3}
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
@@ -5857,6 +5857,11 @@ MonoBehaviour:
   - name: Theme
     clip: {fileID: 8300000, guid: c3dfcf684604d0340a8a604931e65901, type: 3}
     volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+  - name: Explosion
+    clip: {fileID: 8300000, guid: 40758e26cd2e53042b8e385924e7faa6, type: 3}
+    volume: 0.5
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &1540248127
