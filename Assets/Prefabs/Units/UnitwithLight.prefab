@@ -320,7 +320,7 @@ MonoBehaviour:
   cooldownTime: 0
   moveSpeed_def: 0.01
   dragSpeed_def: 20
-  followSpeed_def: 0.75
+  followSpeed_def: 0.5
   gatherTime_def: 0.25
   angleRange_def: 0.1
   maxGatherDist_def: 5
