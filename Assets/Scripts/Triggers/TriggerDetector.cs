@@ -17,6 +17,7 @@ public class TriggerDetector : MonoBehaviour
         if (collision.tag == "Unit")
         {
             manager.totalCount++;
+            unitCount++;
         }
     }
 
@@ -25,6 +26,7 @@ public class TriggerDetector : MonoBehaviour
         if (collision.tag == "Unit")
         {
             manager.totalCount--;
+            unitCount--;
         }
     }
 }
