@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,17 +7,9 @@ public class prop_splitedwall : MonoBehaviour
 {
     public int requireUnits;
     public float minDistance;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public event Action WallDestroyedHandler;
+    
     public void execute(float radius)
     {
         int cnt = 0;
@@ -32,6 +25,7 @@ public class prop_splitedwall : MonoBehaviour
         if (cnt >= requireUnits)
         {
             //add music code here
+            WallDestroyedHandler?.Invoke();
             GameObject.DestroyImmediate(gameObject);
             return;
         }

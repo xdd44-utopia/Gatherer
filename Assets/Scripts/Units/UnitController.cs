@@ -91,23 +91,23 @@ public class UnitController : MonoBehaviour
 				}
 			}
 
-			targetPos = targetPos + new Vector2(dir.x * unit_Status.moveSpeed, dir.y * unit_Status.moveSpeed);
-			if (targetPos.x < cam.transform.position.x - camWidth) {
-				targetPos.x = cam.transform.position.x - camWidth;
-				moveAngle = 0f;
-			}
-			if (targetPos.x > cam.transform.position.x + camWidth) {
-				targetPos.x = cam.transform.position.x + camWidth;
-				moveAngle = - Mathf.PI;
-			}
-			if (targetPos.y < cam.transform.position.y - camHeight) {
-				targetPos.y = cam.transform.position.y - camHeight;
-				moveAngle = Mathf.PI / 2f;
-			}
-			if (targetPos.y > cam.transform.position.y + camHeight) {
-				targetPos.y = cam.transform.position.y + camHeight;
-				moveAngle = - Mathf.PI / 2f;
-			}
+			//targetPos = targetPos + new Vector2(dir.x * unit_Status.moveSpeed, dir.y * unit_Status.moveSpeed);
+			//if (targetPos.x < cam.transform.position.x - camWidth) {
+			//	targetPos.x = cam.transform.position.x - camWidth;
+			//	moveAngle = 0f;
+			//}
+			//if (targetPos.x > cam.transform.position.x + camWidth) {
+			//	targetPos.x = cam.transform.position.x + camWidth;
+			//	moveAngle = - Mathf.PI;
+			//}
+			//if (targetPos.y < cam.transform.position.y - camHeight) {
+			//	targetPos.y = cam.transform.position.y - camHeight;
+			//	moveAngle = Mathf.PI / 2f;
+			//}
+			//if (targetPos.y > cam.transform.position.y + camHeight) {
+			//	targetPos.y = cam.transform.position.y + camHeight;
+			//	moveAngle = - Mathf.PI / 2f;
+			//}
 		}
 	}
 
@@ -156,7 +156,9 @@ public class UnitController : MonoBehaviour
 				Vector2 dir = new Vector2(0, 0);
 				while (!done) {
 					float randAngle = Random.Range(0, Mathf.PI * 2);
-					dir = new Vector2(Mathf.Cos(randAngle) * Random.Range(0.0001f, unit_Status.maxGatherDist / 2), Mathf.Sin(randAngle) * Random.Range(0.0001f, unit_Status.maxGatherDist / 2));
+					dir = new Vector2(Mathf.Cos(randAngle),
+						Mathf.Sin(randAngle))
+						*Random.Range(0.0001f, unit_Status.maxGatherDist / 2);
 					ray = new Ray(tar, dir);
 					hit2D = Physics2D.RaycastAll(ray.origin, ray.direction, dir.magnitude);
 					isHit = false;

@@ -7,7 +7,7 @@ public class SpawnerController : MonoBehaviour
 
 	public GameObject[] prefabs;
 	public int[] nums;
-	private GameObject[] pos;
+	private Transform[] spawnPoints;
 
 	// Start is called before the first frame update
 	void Start() {
@@ -15,15 +15,21 @@ public class SpawnerController : MonoBehaviour
 		float camHeight = cam.orthographicSize;
 		float camWidth = camHeight * cam.aspect;
 
-		pos = GameObject.FindGameObjectsWithTag("UnitSpawnPoint");
+		spawnPoints = new Transform[transform.childCount];
+        for (int i = 0; i < spawnPoints.Length; i++)
+        {
+			spawnPoints[i] = transform.GetChild(i);
+        }
+
 	}
 
 	public void activate() {
 		for (int i=0;i<prefabs.Length;i++) {
 			for (int j=0;j<nums[i];j++) {
-				GameObject unit = Instantiate(prefabs[i]);
-				unit.transform.position = pos[(int)Random.Range(0, pos.Length - 0.0000001f)].transform.position;
+				Instantiate(prefabs[i], spawnPoints[Random.Range(0, spawnPoints.Length)].position,Quaternion.identity);
 			}
 		}
 	}
+
+	
 }
