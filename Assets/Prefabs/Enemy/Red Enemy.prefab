@@ -50,7 +50,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a91d1e9b8211848d39bfdddee9235685, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 39e06b80ad2a14d02aaa3ca01f96c745, type: 3}
   - {fileID: 52791555943683384, guid: dc146867942aa45a29c31fa4f5ee5c1f, type: 3}
   hp: 1
+  healRemainTime: 0
 --- !u!1 &2210620286228622784
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +271,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a91d1e9b8211848d39bfdddee9235685, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -353,7 +354,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a91d1e9b8211848d39bfdddee9235685, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -375,7 +376,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3609a88f52985487f9cc217e04d0557e, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.9411765, g: 0.19607843, b: 0.09411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -495,6 +496,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   status: {fileID: 0}
   targetTF: {fileID: 0}
+  minDistance: 0
   targetTags: Unit
   runSpeed: 1.2
   walkSpeed: 0.7

@@ -50,7 +50,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cab1d3614ee97411ca8fb6b4a8e35d75, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   - {fileID: 2057043482288002766, guid: 39e06b80ad2a14d02aaa3ca01f96c745, type: 3}
   - {fileID: 52791555943683384, guid: dc146867942aa45a29c31fa4f5ee5c1f, type: 3}
   hp: 1
+  healRemainTime: 0
 --- !u!1 &4525606885980184929
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +275,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodFX: {fileID: 2966782554830514058, guid: 1d551fc2c898840f38dcd814d137e128, type: 3}
-  frozenFX: {fileID: 0}
+  frozenFX: {fileID: 2966782554830514058, guid: 5ed1418e95e1209468bd285ffa93f3c3,
+    type: 3}
   attackDistance: 1
   attackInterval: 1
   atk: 0.5
@@ -410,6 +412,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   status: {fileID: 0}
   targetTF: {fileID: 0}
+  minDistance: 0
   targetTags: Unit
   runSpeed: 0.6
   walkSpeed: 0.4
@@ -501,7 +504,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cab1d3614ee97411ca8fb6b4a8e35d75, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -615,7 +618,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a91d1e9b8211848d39bfdddee9235685, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -13,7 +13,7 @@ public class TriggerManager : MonoBehaviour
 
     private void Start()
     {
-        allTriggers = new Transform[transform.childCount];
+        allTriggers = new Transform[transform.childCount - 1];
         for (int i = 0; i < allTriggers.Length; i++)
         {
             allTriggers[i] = transform.GetChild(i);
@@ -22,18 +22,20 @@ public class TriggerManager : MonoBehaviour
 
     private void Update()
     {
-        if (CountAllUnitNumber() >= requiredNumber)
+        if (totalCount >= requiredNumber)
             door.GetComponent<DoorOpen>().Open();
     }
 
-    private int CountAllUnitNumber()
-    {
-        int count = 0;
-        foreach (var item in allTriggers)
-        {
-            count += item.GetComponent<TriggerDetector>().unitCount;
-        }
-        totalCount = count;
-        return count;
-    }
+    //public int CountAllUnitNumber()
+    //{
+    //    int count = 0;
+    //    for (int i = 0; i < allTriggers.Length - 1; i++)
+    //    {
+    //        count += allTriggers[i].GetComponent<TriggerDetector>().unitCount;
+
+    //    }
+       
+    //    totalCount = count;
+    //    return count;
+    //}
 }

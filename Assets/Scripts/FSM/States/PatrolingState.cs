@@ -12,7 +12,7 @@ namespace AI.FSM
     {
         public override void Init()
         {
-            StateID = FSMStateID.Patrolling;
+            StateID = FSMStateID.Patroling;
         }
 
         public override void EnterState(FSMBase fsm)
@@ -47,9 +47,25 @@ namespace AI.FSM
                 case PatrolMode.PingPong:
                     PatrolPingPong(fsm);
                     break;
+                case PatrolMode.OnlyOne:
+                    PatrolOnlyOnce(fsm);
+                    break;
                 default:
                     break;
             }
+        }
+
+        private int currentIndex = -1;
+        private void PatrolOnlyOnce(FSMBase fsm)
+        {
+            int randomIndex;
+            while (true)
+            {
+                randomIndex = UnityEngine.Random.Range(0, fsm.wayPoints.Length);
+                if (currentIndex != randomIndex) break;
+            }
+            currentIndex = randomIndex;
+            fsm.MoveToTarget(fsm.wayPoints[currentIndex], 0, fsm.walkSpeed);
         }
 
         private int index;

@@ -20,6 +20,10 @@ namespace AI.FSM
         /// <summary>
         /// 往返
         /// </summary>
-        PingPong
+        PingPong,
+        /// <summary>
+        /// 只走一个
+        /// </summary>
+        OnlyOne
     }
 }

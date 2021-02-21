@@ -36,6 +36,18 @@ namespace AI.FSM
         /// <summary>
         /// 超出攻击范围
         /// </summary>
-        OutOfAttackRange
+        OutOfAttackRange,
+        /// <summary>
+        /// 进入最小范围
+        /// </summary>
+        WithinMinDist,
+        /// <summary>
+        /// 进入攻击范围
+        /// </summary>
+        WithinAttackRange,
+        /// <summary>
+        /// 全部超出攻击范围
+        /// </summary>
+        AllOutOfAttackRange
     }
 }
