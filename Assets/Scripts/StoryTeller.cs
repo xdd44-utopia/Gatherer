@@ -40,6 +40,7 @@ public class StoryTeller : MonoBehaviour
 			timer = 0;
 			unitSpawner1.GetComponent<SpawnerController>().activate();
 			phase += 1;
+			FindObjectOfType<AudioManager>().Play("Theme", 1);
 		}
 	}
 

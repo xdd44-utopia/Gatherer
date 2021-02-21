@@ -319,11 +319,11 @@ MonoBehaviour:
   maxGatherDist: 0
   cooldownTime: 0
   moveSpeed_def: 0.01
-  dragSpeed_def: 10
+  dragSpeed_def: 20
   followSpeed_def: 0.75
   gatherTime_def: 0.25
   angleRange_def: 0.1
-  maxGatherDist_def: 2
+  maxGatherDist_def: 5
   cooldownTime_def: 2
 --- !u!114 &4563586593264449984
 MonoBehaviour:

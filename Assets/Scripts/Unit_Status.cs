@@ -19,12 +19,12 @@ public class Unit_Status : MonoBehaviour
     [HideInInspector]
     public float cooldownTime;
     [HideInInspector]
-    public float moveSpeed_def = 0.01f;
-    public float dragSpeed_def = 10f;
-    public float followSpeed_def = 1f;
+    public float moveSpeed_def = 0.05f;
+    public float dragSpeed_def = 20f;
+    public float followSpeed_def = 3f;
     public float gatherTime_def = 0.25f;
     public float angleRange_def = 0.1f;
-    public float maxGatherDist_def = 2f;
+    public float maxGatherDist_def = 10f;
     public float cooldownTime_def = 2f;
     private float timer = 0f;
     // Start is called before the first frame update

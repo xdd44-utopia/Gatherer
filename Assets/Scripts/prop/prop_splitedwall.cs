@@ -26,6 +26,25 @@ public class prop_splitedwall : MonoBehaviour
         {
             if (Vector2.Distance(transform.position, unit.transform.position) < radius+minDistance)
             {
+                switch(cnt){
+                    case 0:
+                    break;
+                    case 1:
+                    FindObjectOfType<AudioManager>().Play("0", 1);
+                    break;
+                    case 2:
+                    FindObjectOfType<AudioManager>().Play("1", 1);
+                    break;
+                    case 3:
+                    FindObjectOfType<AudioManager>().Play("2", 1);
+                    break;
+                    case 4:
+                    FindObjectOfType<AudioManager>().Play("3", 1);
+                    break;
+                    default:
+                    FindObjectOfType<AudioManager>().Play("4", 1);
+                    break;
+                }
                 cnt++;
             }
         }
@@ -33,6 +52,7 @@ public class prop_splitedwall : MonoBehaviour
         {
             //add music code here
             GameObject.DestroyImmediate(gameObject);
+            FindObjectOfType<AudioManager>().Play("DestroyWall", 1);
             return;
         }
     }

@@ -23,6 +23,7 @@ public class EnemySkills : MonoBehaviour
     {
         if (currentIndex == maxNumOfEnemies) return false;
         GameObject enemyGO = Instantiate(enemyPrefab, generatePoint[currentIndex++].position, Quaternion.identity);
+        FindObjectOfType<AudioManager>().Play("BossSummon", 1);
         return true;
     }
 
@@ -34,6 +35,7 @@ public class EnemySkills : MonoBehaviour
             {
                 GameObject bulletGO = Instantiate(bulletPrefab, shootPoints[i].position, Quaternion.identity);
                 bulletGO.GetComponent<BigBullet>().targetPos = shootPoints[i].position + (shootPoints[i].position - transform.position).normalized * attackDistance;
+                FindObjectOfType<AudioManager>().Play("BossShooting", 1);
             }
         }
         else
@@ -42,6 +44,7 @@ public class EnemySkills : MonoBehaviour
             {
                 GameObject bulletGO = Instantiate(bulletPrefab, shootPoints[i].position, Quaternion.identity);
                 bulletGO.GetComponent<BigBullet>().targetPos = shootPoints[i].position + (shootPoints[i].position - transform.position).normalized * attackDistance;
+                FindObjectOfType<AudioManager>().Play("BossShooting", 1);
             }
         }
            

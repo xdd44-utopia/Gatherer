@@ -78,8 +78,8 @@ public class MouseController : MonoBehaviour
 		gatherableCnt = 1;
 		float cnt = 0;
 		foreach (GameObject unit in gatherable) {
-			bool result = unit.GetComponent<UnitController>().tryGather(transform.position);
-			if (result) {
+			int result = unit.GetComponent<UnitController>().tryGather(transform.position);
+			if (result > 0) {
 				gatherableCnt += 2;
 				vertices.Add(unit.transform.position);
 				vertices.Add(transform.position);
@@ -112,8 +112,8 @@ public class MouseController : MonoBehaviour
 			if(unit.GetComponent<UnitController>().isFrozenUnit==true){
 				doWeHaveFrozenHere=true;
 			}
-			bool result = unit.GetComponent<UnitController>().tryGather(transform.position);
-			if (result) {
+			int result = unit.GetComponent<UnitController>().tryGather(transform.position);
+			if (result == 2) {
 				units_avi.Add(unit);
 				cnt++;
 			}

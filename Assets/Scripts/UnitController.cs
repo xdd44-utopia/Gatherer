@@ -57,7 +57,7 @@ public class UnitController : MonoBehaviour
 
 		if (cooldown > 0) {
 			cooldown -= Time.deltaTime;
-			unitColor.a = 0.75f;
+			unitColor.a = 0.5f;
 		}
 		else {
 			unitColor.a = 1f;
@@ -133,7 +133,7 @@ public class UnitController : MonoBehaviour
 		}
 	}
 
-	public bool tryGather(Vector3 tar) {
+	public int tryGather(Vector3 tar) { //0: cannot gather 1: in cooldown 2: can gather
 		Vector2 diff = new Vector2(tar.x, tar.y) - targetPos;
 		Ray ray = new Ray(targetPos, diff);
 		RaycastHit2D[] hit2D = Physics2D.RaycastAll(ray.origin, ray.direction, diff.magnitude);
@@ -149,7 +149,6 @@ public class UnitController : MonoBehaviour
 			Vector3.Distance(tar, transform.position) < unit_Status.maxGatherDist &&
 			!isHit &&
 			status == Status.Free
-			&& cooldown <= 0f
 		) {
 			if (Random.Range(0, 25) > 1) {
 				bool done = false;
@@ -172,16 +171,21 @@ public class UnitController : MonoBehaviour
 				}
 				targetPos = Vector3.Lerp(targetPos, tar + new Vector3(dir.x, dir.y, 0), Time.deltaTime * unit_Status.dragSpeed);
 			}
-			return true;
+			if (cooldown <= 0) {
+				return 2;
+			}
+			else {
+				return 1;
+			}
 		}
 		else {
-			return false;
+			return 0;
 		}
 	}
 
 	public bool startGather(Vector3 tar)
 	{
-		if (tryGather(tar)) {
+		if (tryGather(tar) == 2) {
 			timer = 0f;
 			gatherTar = tar;
 			startPos = transform.position;

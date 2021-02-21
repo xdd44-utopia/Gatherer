@@ -7,5 +7,6 @@ public class DoorOpen : MonoBehaviour
     public void Open()
     {
         GetComponentInChildren<Animator>().SetBool("open", true);
+        FindObjectOfType<AudioManager>().Play("DoorOpen", 1);
     }
 }

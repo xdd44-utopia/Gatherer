@@ -34013,7 +34013,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1424708795
 Light:
   m_ObjectHideFlags: 0
@@ -36750,33 +36750,154 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: UnitAttack
-    clip: {fileID: 8300000, guid: 79df5e4576b0254449793f1f2fa25c6a, type: 3}
-    volume: 0.5
-    pitch: 1
-    source: {fileID: 0}
   - name: UnitDeath
-    clip: {fileID: 8300000, guid: bd215d47e286431448ba7bd0dd2db8c2, type: 3}
+    clip: {fileID: 8300000, guid: 9088c3f57cdec3a4ebdc78af765fff8e, type: 3}
+    loop: 0
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
   - name: EnemyAttack
-    clip: {fileID: 8300000, guid: 40e5375396ae2994eb7dcbc85e917425, type: 3}
+    clip: {fileID: 8300000, guid: 83246c04da5fc4940b32b2720768eb0e, type: 3}
+    loop: 0
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
   - name: EnemyDeath
-    clip: {fileID: 8300000, guid: df71b8deb7e70cb4b83cf79eeef3fce4, type: 3}
+    clip: {fileID: 8300000, guid: c4d3c15bfd142204b85063efc613c1ef, type: 3}
+    loop: 0
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
   - name: Theme
-    clip: {fileID: 8300000, guid: c3dfcf684604d0340a8a604931e65901, type: 3}
-    volume: 0.4
+    clip: {fileID: 8300000, guid: 9c403f22fda6dcf4b97ed7c2bae69e6e, type: 3}
+    loop: 1
+    volume: 0.5
     pitch: 1
     source: {fileID: 0}
   - name: Explosion
     clip: {fileID: 8300000, guid: 40758e26cd2e53042b8e385924e7faa6, type: 3}
+    loop: 0
+    volume: 1.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: UnitAttack
+    clip: {fileID: 8300000, guid: 37728a2ea6ac9d043952a49115aa7c52, type: 3}
+    loop: 0
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - name: BossShooting
+    clip: {fileID: 8300000, guid: 4c50d37f2213afe4eb2e12f40372f959, type: 3}
+    loop: 0
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - name: BossSummon
+    clip: {fileID: 8300000, guid: 26cd701b33526074bae7f6f559ae4942, type: 3}
+    loop: 0
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - name: DoorOpen
+    clip: {fileID: 8300000, guid: 67fa50747d0781349a85000e62dd08ee, type: 3}
+    loop: 0
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - name: Laser
+    clip: {fileID: 8300000, guid: b1dd0115a490c9f438fa8d692e5cae8c, type: 3}
+    loop: 0
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - name: DestroyWall
+    clip: {fileID: 8300000, guid: 4981aca93e86a3c40a0394f28f8aab1b, type: 3}
+    loop: 0
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - name: Ding
+    clip: {fileID: 8300000, guid: 9088c3f57cdec3a4ebdc78af765fff8e, type: 3}
+    loop: 0
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - name: 0
+    clip: {fileID: 8300000, guid: 579bc2387e46e6140975c6fe5c8a6132, type: 3}
+    loop: 0
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - name: 1
+    clip: {fileID: 8300000, guid: 4e949b57cff108047bfb97ad0bacbe48, type: 3}
+    loop: 0
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - name: 2
+    clip: {fileID: 8300000, guid: 6d375d57d4cb13248ae19b38ea0b94e0, type: 3}
+    loop: 0
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - name: 3
+    clip: {fileID: 8300000, guid: 4cc13fcf1e4d2164792a99db3b2cfb6f, type: 3}
+    loop: 0
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - name: 4
+    clip: {fileID: 8300000, guid: c8a046bb8416631449ee0a98efbfd4da, type: 3}
+    loop: 0
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - name: 5
+    clip: {fileID: 8300000, guid: 6220dc82019473640b3fdd15dd903d8c, type: 3}
+    loop: 0
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  chords:
+  - name: 
+    clip: {fileID: 8300000, guid: 78bb44b93ff85e3449dfe0b8bcee3410, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: 37728a2ea6ac9d043952a49115aa7c52, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: 88796c773c084a34a95f462e1717663d, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: 4952c521f0f33144b8a2241c7b5b5583, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: d76852cb79b8e544cb6a11ceaf1880c3, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: 1f1070d894edd1d439bc7ea80564f915, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: f0e280f22efa06d419abc77ab7b12cd0, type: 3}
+    loop: 0
     volume: 1
     pitch: 1
     source: {fileID: 0}
@@ -51351,11 +51472,11 @@ MonoBehaviour:
   maxGatherDist: 0
   cooldownTime: 0
   moveSpeed_def: 0.01
-  dragSpeed_def: 10
+  dragSpeed_def: 20
   followSpeed_def: 0.75
   gatherTime_def: 0.25
   angleRange_def: 0.1
-  maxGatherDist_def: 2
+  maxGatherDist_def: 5
   cooldownTime_def: 2
 --- !u!4 &4526991892891534832
 Transform:

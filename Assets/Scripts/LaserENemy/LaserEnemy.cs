@@ -16,6 +16,7 @@ public class LaserEnemy : MonoBehaviour
         if(startTime < Time.time)
         {
             GameObject laserGO = Instantiate(laser, shootPoint.position, Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("Laser", 1);
             Destroy(laserGO, shootDelay);
             startTime = Time.time + shootInterval;
         }
