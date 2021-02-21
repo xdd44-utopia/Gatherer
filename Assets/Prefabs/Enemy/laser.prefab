@@ -84,7 +84,6 @@ GameObject:
   - component: {fileID: 6582494443477699486}
   - component: {fileID: 4222537486798861646}
   - component: {fileID: 8150223771612231824}
-  - component: {fileID: 6608953302988465918}
   m_Layer: 8
   m_Name: Rect (107)
   m_TagString: Wall
@@ -124,7 +123,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 55c08ef9704fb31418bb510dc7ed04c1, type: 2}
+  - {fileID: 2100000, guid: a91d1e9b8211848d39bfdddee9235685, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -231,23 +230,3 @@ SpriteMask:
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 0
---- !u!114 &6608953302988465918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7528695653815745141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb38d44e75fb304d8c8d8203069dfd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ForceMaterial: {fileID: 2100000, guid: 55c08ef9704fb31418bb510dc7ed04c1, type: 2}
-  ActiveChange: 0
-  AddShadow: 1
-  ReceivedShadow: 1
-  BlendMode: 0
-  _Alpha: 1
-  ShaderChange: 1
-  ActiveUpdate: 1
